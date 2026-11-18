@@ -724,7 +724,7 @@ fieldset.fld{border:0;margin:0;padding:0;min-width:0}
   document.addEventListener('click',function(e){var r=e.target.closest('[data-rm]');if(r){cart.splice(+r.dataset.rm,1);save();render();$('[data-cart-lines] button,[data-checkout]').focus();}});
   window.__addToCart=function(line,open){cart.push(line);save();render();if(open)openDrawer('cart');else toast('Added to cart: '+line.title)};
   $$('[data-add]').forEach(function(b){b.addEventListener('click',function(){
-    window.__addToCart({title:b.dataset.title,price:+b.dataset.price,img:b.dataset.img,qty:1,props:[['Ship week','As soon as possible']]},false);
+    window.__addToCart({title:b.dataset.title,price:+b.dataset.price,img:b.dataset.img,qty:1},false);
     b.innerHTML='Added';setTimeout(function(){b.innerHTML='Quick add'},1600);
   })});
   $('[data-checkout]').addEventListener('click',function(){toast('Checkout is handled by Shopify in the real build')});

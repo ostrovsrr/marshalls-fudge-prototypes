@@ -509,16 +509,6 @@ fieldset.fld{border:0;margin:0;padding:0;min-width:0}
         </fieldset>
         <div class="row2">
           <div class="fld"><span class="fld__lbl" id="qty-l">Quantity</span><div class="qty" role="group" aria-labelledby="qty-l"><button type="button" data-step="-1" aria-label="Decrease quantity">&minus;</button><input type="number" inputmode="numeric" min="1" max="99" value="1" aria-labelledby="qty-l" data-qty><button type="button" data-step="1" aria-label="Increase quantity">+</button></div></div>
-          <div class="fld"><label class="fld__lbl" for="shipweek">Ship week</label><div class="select"><select id="shipweek" data-ship aria-describedby="ship-help"><option>As soon as possible</option></select><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></div></div>
-        </div>
-        <p class="help" id="ship-help" style="margin-top:-14px">Buy now, ship later: choose the week you want this order to ship.</p>
-        <div class="giftbox">
-          <label class="check"><input type="checkbox" data-gift aria-controls="giftmsg" aria-expanded="false">This order is a gift</label>
-          <div class="giftbox__msg" id="giftmsg" hidden>
-            <label class="fld__lbl" for="gm">Gift message <span>(optional)</span></label>
-            <textarea id="gm" maxlength="250" data-gm aria-describedby="gm-c" placeholder="Merry Christmas from all of us..."></textarea>
-            <p class="giftbox__count" id="gm-c"><span data-gmc>0</span> / 250 characters</p>
-          </div>
         </div>
         <button class="btn btn--block buy__cta" type="submit">Add to cart</button>
         <p class="buy__call"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 3h4l2 5-2.5 1.5a11 11 0 0 0 6 6L16 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 5a2 2 0 0 1 2-2"/></svg><span>Ordering for a group or a business? Call <a href="tel:+18003438343">(800) 343-8343</a></span></p>
@@ -621,7 +611,7 @@ fieldset.fld{border:0;margin:0;padding:0;min-width:0}
   document.addEventListener('click',function(e){var r=e.target.closest('[data-rm]');if(r){cart.splice(+r.dataset.rm,1);save();render();$('[data-cart-lines] button,[data-checkout]').focus();}});
   window.__addToCart=function(line,open){cart.push(line);save();render();if(open)openDrawer('cart');else toast('Added to cart: '+line.title)};
   $$('[data-add]').forEach(function(b){b.addEventListener('click',function(){
-    window.__addToCart({title:b.dataset.title,price:+b.dataset.price,img:b.dataset.img,qty:1,props:[['Ship week','As soon as possible']]},false);
+    window.__addToCart({title:b.dataset.title,price:+b.dataset.price,img:b.dataset.img,qty:1},false);
     b.innerHTML='Added';setTimeout(function(){b.innerHTML='Quick add'},1600);
   })});
   $('[data-checkout]').addEventListener('click',function(){toast('Checkout is handled by Shopify in the real build')});
@@ -661,16 +651,8 @@ fieldset.fld{border:0;margin:0;padding:0;min-width:0}
   $$('input[name="opt"]').forEach(function(r){r.addEventListener('change',function(){$('[data-optval]').textContent=r.value})});
   var q=$('[data-qty]');
   $$('[data-step]').forEach(function(b){b.addEventListener('click',function(){q.value=Math.min(99,Math.max(1,(parseInt(q.value,10)||1)+(+b.dataset.step)))})});
-  // ship weeks: next 8 Mondays
-  var sel=$('[data-ship]'), d=new Date(); d.setHours(0,0,0,0); d.setDate(d.getDate()+((8-d.getDay())%7||7));
-  var fmt=new Intl.DateTimeFormat('en-US',{month:'long',day:'numeric'});
-  for(var k=0;k<8;k++){var o=document.createElement('option');o.textContent='Week of '+fmt.format(d);sel.appendChild(o);d.setDate(d.getDate()+7)}
-  var g=$('[data-gift]'), box=$('#giftmsg'), gm=$('[data-gm]');
-  g.addEventListener('change',function(){box.hidden=!g.checked;g.setAttribute('aria-expanded',g.checked);if(g.checked)gm.focus()});
-  gm.addEventListener('input',function(){$('[data-gmc]').textContent=gm.value.length});
   $('[data-buy]').addEventListener('submit',function(e){e.preventDefault();
-    var props=[['Chocolate Weight',$('input[name="opt"]:checked').value],['Ship week',sel.value]];
-    if(g.checked){props.push(['Gift','Yes']);if(gm.value.trim())props.push(['Gift message',gm.value.trim()])}
+    var props=[['Chocolate Weight',$('input[name="opt"]:checked').value]];
     window.__addToCart({title:"Milk And White Chocolate Peppermint Bark",price:21.5,img:"../../../img/e0f5baf7970d51bd.jpg",qty:parseInt(q.value,10)||1,props:props},true);
   });
 })();

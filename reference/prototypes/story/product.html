@@ -525,32 +525,13 @@ body.cart-open .cart-scrim{opacity:1;pointer-events:auto}
                 <button type="button" id="qplus" aria-label="Increase quantity">+</button>
               </div>
             </div>
-            <div>
-              <label class="flabel" for="shipweek">Ship week</label>
-              <div class="select">
-                <select id="shipweek" aria-describedby="ship-hint"></select>
-                <svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M2 4l4 4 4-4"/></svg>
-              </div>
-            </div>
           </div>
-          <p class="hint" id="ship-hint" style="margin-top:-14px">Buy now, ship later. Pick the week you want this order to ship.</p>
-
-          <div class="giftbox" id="giftbox">
-            <label class="check"><input type="checkbox" id="isgift" aria-controls="gift-fields" aria-expanded="false"> This order is a gift</label>
-            <div class="gift-fields" id="gift-fields" hidden>
-              <label class="flabel" for="giftmsg" style="margin-bottom:8px">Gift message <span style="font-weight:400;color:var(--muted)">optional</span></label>
-              <textarea id="giftmsg" maxlength="250" aria-describedby="gift-count" placeholder="Merry Christmas from all of us. A taste of Michigan."></textarea>
-              <div class="gift-meta"><span>We include your message with the order.</span><span id="gift-count">0 / 250</span></div>
-            </div>
-          </div>
-
           <button class="btn btn-navy atc" type="submit" id="atc"></button>
           <ul class="trust" id="trust"></ul>
         </form>
 
         <div class="acc">
           <details open><summary>Made the Marshall's way<svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M2 4l4 4 4-4"/></svg></summary><p id="acc-made"></p></details>
-          <details><summary>Ship weeks and gift messages<svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M2 4l4 4 4-4"/></svg></summary><p>Order today and choose the week it ships, so gifts arrive when you want them. Add a gift message and we'll include it with the order. See <a href="#">Shipping &amp; Returns</a> for details.</p></details>
           <details><summary>Ordering for a business?<svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M2 4l4 4 4-4"/></svg></summary><p>We can ship to multiple locations and add personalized cards. Call <a href="#" class="tel"></a> or browse <a href="index.html#gifts">business gifts</a>.</p></details>
         </div>
       </div>
@@ -685,7 +666,7 @@ document.title = P.title + ' | ' + B.name;
 $('#crumb-p').textContent = P.title;
 $('#p-title').textContent = P.title;
 $('#p-price').textContent = P.price;
-$('#p-desc').textContent = `A Christmas gift from the Marshall's candy kitchen, in your choice of ${opt.values.length} holiday designs. Pick a ship week and add a gift message below.`;
+$('#p-desc').textContent = `A Christmas gift from the Marshall's candy kitchen, in your choice of ${opt.values.length} holiday designs.`;
 $('#since').textContent = B.tagline;
 $('#acc-made').textContent = C['fudge'].description.split('. ')[0] + '. ' + DATA.aboutShort;
 document.querySelectorAll('.tel').forEach(a => { a.textContent = B.phone; a.href = 'tel:' + telNum; });
@@ -715,20 +696,6 @@ const unit = parseFloat(P.price.replace(/[^0-9.]/g,''));
 function updateAtc(){ $('#atc').textContent = `Add to cart, ${money(unit * qty.value)}`; }
 updateAtc();
 
-/* ship week: ASAP then the next 8 weeks (Mondays) */
-(function(){
-  const sel = $('#shipweek'); const fmt = new Intl.DateTimeFormat('en-US', {month:'short', day:'numeric'});
-  const d = new Date(); d.setHours(0,0,0,0); d.setDate(d.getDate() + ((8 - d.getDay()) % 7 || 7));
-  let html = '<option value="asap">As soon as possible</option>';
-  for (let i = 0; i < 8; i++){ const s = new Date(d); s.setDate(d.getDate() + i*7); html += `<option value="${s.toISOString().slice(0,10)}">Week of ${fmt.format(s)}</option>`; }
-  sel.innerHTML = html;
-})();
-
-/* gift */
-const isGift = $('#isgift'), gf = $('#gift-fields'), msg = $('#giftmsg');
-isGift.addEventListener('change', () => { gf.hidden = !isGift.checked; isGift.setAttribute('aria-expanded', isGift.checked); $('#giftbox').classList.toggle('on', isGift.checked); if (isGift.checked) msg.focus(); });
-msg.addEventListener('input', () => $('#gift-count').textContent = `${msg.value.length} / 250`);
-
 $('#trust').innerHTML = DATA.valueProps.map(v => `<li><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 10.5l4 4 8-9"/></svg>${esc(v)}</li>`).join('');
 
 /* cart drawer */
@@ -736,8 +703,7 @@ const lines = [];
 const cartEl = $('#cart');
 function renderCart(){
   $('#cart-body').innerHTML = lines.length ? lines.map(l => `<div class="line"><img src="${l.image}" alt=""><div><h3>${esc(l.title)}</h3><dl>
-    ${l.design ? `<dt>Design</dt><dd>${esc(l.design)}</dd>` : ''}<dt>Qty</dt><dd>${l.qty}</dd><dt>Ships</dt><dd>${esc(l.ship)}</dd>
-    ${l.gift ? `<dt>Gift</dt><dd>${l.msg ? '“' + esc(l.msg) + '”' : 'Yes, no message'}</dd>` : ''}</dl>
+    ${l.design ? `<dt>Design</dt><dd>${esc(l.design)}</dd>` : ''}<dt>Qty</dt><dd>${l.qty}</dd></dl>
     <p class="price" style="margin-top:8px">${money(l.price * l.qty)}</p></div></div>`).join('') : '<p>Your cart is empty. Browse <a href="index.html#christmas">Christmas treats</a>.</p>';
   const n = lines.reduce((a,l) => a + l.qty, 0);
   $('#cart-sub').textContent = money(lines.reduce((a,l) => a + l.price*l.qty, 0));
@@ -751,11 +717,10 @@ $('#checkout').addEventListener('click', () => { toast.textContent = 'Prototype:
 $('#cart-link').addEventListener('click', e => { e.preventDefault(); renderCart(); openCart(); });
 $('#buy-form').addEventListener('submit', e => {
   e.preventDefault();
-  const sel = $('#shipweek');
-  lines.push({title:P.title, image:P.image, design:cur(), qty:+qty.value, price:unit, ship:sel.options[sel.selectedIndex].text, gift:isGift.checked, msg:msg.value.trim()});
+  lines.push({title:P.title, image:P.image, design:cur(), qty:+qty.value, price:unit});
   renderCart(); openCart();
 });
-document.addEventListener('click', e => { const b = e.target.closest('[data-add]'); if (!b) return; const p = C['christmas'].sample.find(x => x.title === b.dataset.add); lines.push({title:p.title, image:p.image, qty:1, price:parseFloat(p.price.slice(1)), ship:'As soon as possible'}); renderCart(); openCart(); });
+document.addEventListener('click', e => { const b = e.target.closest('[data-add]'); if (!b) return; const p = C['christmas'].sample.find(x => x.title === b.dataset.add); lines.push({title:p.title, image:p.image, qty:1, price:parseFloat(p.price.slice(1))}); renderCart(); openCart(); });
 
 /* more */
 $('#xmas-all').textContent = `Shop all ${C['christmas'].count} Christmas treats`;
