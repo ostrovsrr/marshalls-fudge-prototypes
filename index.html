@@ -1,0 +1,158 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Marshall's Design Directions</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Young+Serif&family=Source+Sans+3:wght@400;600&display=swap">
+<style>
+  /* Layout: navy masthead with the sign logo, then three direction cards (screenshot, summary, links) and a shared-features note. */
+  :root {
+    --bg: #ffffff;
+    --surface: #f3f6f9;
+    --line: #e1e8ee;
+    --ink: #2b3640;
+    --muted: #5d6b77;
+    --navy: #003a5d;
+    --on-navy: #ffffff;
+    --on-navy-muted: #d5e2ec;
+    --accent: #976036;
+    --link: #003a5d;
+    --focus: #5c8cb4;
+    --display: "Young Serif", Georgia, "Times New Roman", serif;
+    --body: "Source Sans 3", "Segoe UI", system-ui, sans-serif;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --bg: #0d1820; --surface: #14232e; --line: #243644; --ink: #e6edf2; --muted: #a9b8c4;
+      --navy: #062a40; --on-navy: #ffffff; --on-navy-muted: #c6d6e2; --accent: #c88a5b; --link: #9fc3e0; --focus: #8fb6d6;
+      color-scheme: dark;
+    }
+  }
+  :root[data-theme="dark"] {
+    --bg: #0d1820; --surface: #14232e; --line: #243644; --ink: #e6edf2; --muted: #a9b8c4;
+    --navy: #062a40; --on-navy: #ffffff; --on-navy-muted: #c6d6e2; --accent: #c88a5b; --link: #9fc3e0; --focus: #8fb6d6;
+    color-scheme: dark;
+  }
+  * { box-sizing: border-box; }
+  body { background: var(--bg); color: var(--ink); font: 17px/1.55 var(--body); }
+  .wrap { max-width: 1280px; margin: 0 auto; padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px)); }
+  h1, h2 { font-family: var(--display); font-weight: 400; text-wrap: balance; }
+  .mast { background: var(--navy); color: var(--on-navy); }
+  .mast .wrap { padding-block: 40px 48px; display: grid; justify-items: center; gap: 18px; text-align: center; }
+  .logo { background: #ffffff; border-radius: 10px; padding: 10px 14px; width: min(420px, 100%); }
+  .logo img { display: block; width: 100%; height: auto; }
+  .mast h1 { margin: 6px 0 0; font-size: clamp(28px, 4vw, 42px); line-height: 1.15; }
+  .mast p { margin: 0; max-width: 64ch; color: var(--on-navy-muted); }
+  main .wrap { padding-block: 40px 56px; display: grid; gap: 44px; }
+  .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(320px, 100%), 1fr)); gap: 28px; }
+  .card { border: 1px solid var(--line); border-radius: 12px; overflow: hidden; display: flex; flex-direction: column; background: var(--bg); min-width: 0; }
+  .shot { height: 460px; overflow: hidden; background: var(--surface); border-bottom: 1px solid var(--line); }
+  .shot img { width: 100%; display: block; }
+  .body { padding: 20px 22px 24px; display: flex; flex-direction: column; gap: 10px; flex: 1; }
+  .tag { color: var(--accent); font-weight: 600; letter-spacing: .08em; text-transform: uppercase; font-size: 13px; }
+  .card h2 { margin: 0; color: var(--link); font-size: 26px; }
+  .card p { margin: 0; }
+  .card ul { margin: 0; padding-left: 18px; color: var(--muted); display: grid; gap: 4px; }
+  .links { margin-top: auto; display: flex; flex-wrap: wrap; gap: 10px; padding-top: 10px; }
+  .links a { text-decoration: none; padding: 9px 14px; border-radius: 6px; border: 1px solid var(--link); color: var(--link); font-weight: 600; font-size: 15px; }
+  .links a.primary { background: var(--link); color: var(--bg); }
+  a:focus-visible { outline: 2px solid var(--focus); outline-offset: 2px; }
+  .common { background: var(--surface); border-radius: 12px; padding: 24px 26px; display: grid; gap: 10px; }
+  .common h2 { color: var(--link); margin: 0; font-size: 24px; }
+  .common ul { margin: 0; padding-left: 18px; display: grid; gap: 4px; }
+  .common p { margin: 0; color: var(--muted); }
+  footer .wrap { padding-block: 0 40px; text-align: center; color: var(--muted); font-size: 14px; }
+  @media (prefers-reduced-motion: reduce) { * { scroll-behavior: auto !important; } }
+</style>
+</head>
+<body style="margin:0">
+<header class="mast">
+  <div class="wrap">
+    <div class="logo"><img src="reference/brand/marshalls-logo-horizontal.png" alt="Marshall's Fudge &amp; Chocolate Co." width="4460" height="709"></div>
+    <h1>Three design directions for the new website</h1>
+    <p>Each one uses Marshall's real products, prices, photos and story, in the three brand colours from the brand refresh. Open the homepage and a product page of each; they work on desktop and phone.</p>
+  </div>
+</header>
+
+<main>
+  <div class="wrap">
+    <div class="grid">
+      <article class="card">
+        <div class="shot"><img src="reference/prototypes/heritage/desktop.png" alt="Heritage Refined homepage, full page"></div>
+        <div class="body">
+          <span class="tag">Direction A</span>
+          <h2>Heritage Refined</h2>
+          <p>Today's site, done properly. Same structure and feel, cleaner and easier to shop.</p>
+          <ul>
+            <li>Centred sign logo, navy bands, light-blue menu row</li>
+            <li>Photo slideshow, category circles on navy, Christmas grid</li>
+            <li>Signboard frames taken from the new logo</li>
+          </ul>
+          <div class="links">
+            <a class="primary" href="reference/prototypes/heritage/index.html">Open homepage</a>
+            <a href="reference/prototypes/heritage/product.html">Product page</a>
+            <a href="reference/prototypes/heritage/mobile.png">Phone view</a>
+            <a href="reference/prototypes/heritage/menu-open.png">Menu</a>
+          </div>
+        </div>
+      </article>
+      <article class="card">
+        <div class="shot"><img src="reference/prototypes/gifting/desktop.png" alt="Gift Shop Modern homepage, full page"></div>
+        <div class="body">
+          <span class="tag">Direction B</span>
+          <h2>Gift Shop Modern</h2>
+          <p>Built around sending fudge as a gift. Bright, airy and quick to shop.</p>
+          <ul>
+            <li>Christmas gift hero, shop by occasion and by category</li>
+            <li>Gift towers, business gifts band, club plan cards</li>
+            <li>"Choose your ship week" and "Add a gift message" shown up front</li>
+          </ul>
+          <div class="links">
+            <a class="primary" href="reference/prototypes/gifting/index.html">Open homepage</a>
+            <a href="reference/prototypes/gifting/product.html">Product page</a>
+            <a href="reference/prototypes/gifting/mobile.png">Phone view</a>
+            <a href="reference/prototypes/gifting/menu-open.png">Menu</a>
+          </div>
+        </div>
+      </article>
+      <article class="card">
+        <div class="shot"><img src="reference/prototypes/story/desktop.png" alt="Mackinac Story homepage, full page"></div>
+        <div class="body">
+          <span class="tag">Direction C</span>
+          <h2>Mackinac Story</h2>
+          <p>A hundred-year family candy shop on the Straits. Tells the story, sells the fudge.</p>
+          <ul>
+            <li>"Since 1923" hero, copper kettle and marble table band</li>
+            <li>Timeline from 1923 to today along the Mackinac Bridge</li>
+            <li>Large category tiles, "Visit us in Mackinaw City"</li>
+          </ul>
+          <div class="links">
+            <a class="primary" href="reference/prototypes/story/index.html">Open homepage</a>
+            <a href="reference/prototypes/story/product.html">Product page</a>
+            <a href="reference/prototypes/story/mobile.png">Phone view</a>
+            <a href="reference/prototypes/story/menu-open.png">Menu</a>
+          </div>
+        </div>
+      </article>
+    </div>
+
+    <section class="common">
+      <h2>In all three</h2>
+      <ul>
+        <li>New menu: Fudge, Chocolates, Apples &amp; Popcorn, Gifts, Sugar Free, Seasonal</li>
+        <li>Ship week picker ("buy now, ship later") and gift message on the product page and in the cart</li>
+        <li>Fudge of the Month Club plans, Most Popular, New Products and the Christmas collection</li>
+        <li>Phone layout with a slide-out menu</li>
+      </ul>
+      <p>These are design prototypes, not a live store. Product pages and the demo cart work; other links, search, checkout and the newsletter are placeholders. Pieces can be mixed between directions.</p>
+    </section>
+  </div>
+</main>
+
+<footer><div class="wrap">Prepared by Helios Technology Solutions for Marshall's Fudge &amp; Chocolate Co.</div></footer>
+</body>
+</html>

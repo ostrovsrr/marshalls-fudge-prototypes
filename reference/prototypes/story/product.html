@@ -1,0 +1,766 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta name="robots" content="noindex, nofollow">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Santa's Belly Full | Marshall's Fudge & Chocolate Co.</title>
+<meta name="description" content="Santa's Belly Full, a Christmas gift from Marshall's Fudge & Chocolate Co., Mackinaw City, Michigan.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@400;500;600;700&family=Young+Serif&display=swap" rel="stylesheet">
+<style>
+/* ===== Tokens ===== */
+:root{
+  --navy:#003a5d; --navy-deep:#002b45; --navy-ink:#0d2f47;
+  --blue:#5c8cb4; --blue-mist:#eef3f8; --blue-line:#cfdeeb;
+  --copper:#976036; --copper-deep:#7d4f2c; --copper-tint:#f5ede6;
+  --white:#fff; --text:#333; --muted:#5f6670; --rule:#ebebeb;
+  --serif:"Young Serif", Georgia, "Times New Roman", serif;
+  --sans:"Libre Franklin", "Helvetica Neue", Arial, sans-serif;
+  --gutter:clamp(16px, 4vw, 56px);
+  --max:1320px;
+}
+*,*::before,*::after{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--white);color:var(--text);font:400 16px/1.6 var(--sans);overflow-x:hidden}
+img{max-width:100%;display:block}
+a{color:inherit}
+button{font:inherit;cursor:pointer}
+:focus-visible{outline:3px solid var(--blue);outline-offset:3px;border-radius:2px}
+.skip{position:absolute;left:-999px;top:8px;background:var(--navy);color:#fff;padding:10px 16px;z-index:200}
+.skip:focus{left:8px}
+.wrap{max-width:var(--max);margin:0 auto;padding:0 var(--gutter)}
+.vh{position:absolute!important;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+h1,h2,h3{font-family:var(--serif);font-weight:400;color:var(--navy);margin:0;line-height:1.08;letter-spacing:-.01em}
+h2{font-size:clamp(32px,4.2vw,56px)}
+h3{font-size:clamp(20px,1.8vw,24px);line-height:1.2}
+p{margin:0}
+
+/* buttons */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:48px;padding:12px 26px;border-radius:999px;border:2px solid transparent;font:600 16px/1 var(--sans);text-decoration:none;transition:background .2s,color .2s,border-color .2s}
+.btn-navy{background:var(--navy);color:#fff}
+.btn-navy:hover{background:var(--navy-deep)}
+.btn-white{background:#fff;color:var(--navy)}
+.btn-white:hover{background:var(--blue-mist)}
+.btn-ghost-light{border-color:rgba(255,255,255,.85);color:#fff}
+.btn-ghost-light:hover{background:rgba(255,255,255,.12)}
+.btn-ghost{border-color:var(--navy);color:var(--navy)}
+.btn-ghost:hover{background:var(--blue-mist)}
+.textlink{color:var(--navy);font-weight:600;text-decoration:underline;text-decoration-color:var(--copper);text-decoration-thickness:2px;text-underline-offset:6px}
+.textlink:hover{text-decoration-color:var(--navy)}
+
+/* ===== Utility bar ===== */
+.utility{background:var(--navy);color:#fff;font-size:14px}
+.utility .wrap{display:flex;align-items:center;justify-content:space-between;gap:24px;min-height:40px}
+.utility a{color:#fff;text-decoration:none}
+.utility a:hover{text-decoration:underline}
+.utility-tag{font-family:var(--serif);font-size:15px;letter-spacing:.01em}
+.utility nav ul{display:flex;gap:22px;list-style:none;margin:0;padding:0}
+@media (max-width:1100px){.utility nav{display:none}}
+@media (max-width:640px){.utility .wrap{justify-content:center}.utility-tag{display:none}}
+
+/* ===== Header ===== */
+.site-header{position:sticky;top:0;z-index:50;background:#fff;border-bottom:1px solid var(--rule)}
+.hdr{display:grid;grid-template-columns:1fr auto 1fr;align-items:center;gap:16px;padding-top:14px;padding-bottom:10px}
+.hdr-logo{grid-column:2;display:block}
+.hdr-logo img{height:58px;width:auto}
+.hdr-search{grid-column:1;justify-self:start;display:flex;align-items:center;gap:10px;border:1px solid var(--blue-line);border-radius:999px;padding:0 6px 0 16px;height:44px;width:min(300px,100%)}
+.hdr-search input{border:0;outline:0;font:inherit;font-size:15px;color:var(--text);width:100%;background:transparent}
+.hdr-search:focus-within{border-color:var(--navy);box-shadow:0 0 0 3px rgba(92,140,180,.35)}
+.hdr-search button{border:0;background:none;width:34px;height:34px;display:grid;place-items:center;color:var(--navy);border-radius:50%}
+.hdr-icons{grid-column:3;justify-self:end;display:flex;align-items:center;gap:4px}
+.icon-btn{position:relative;display:grid;place-items:center;width:44px;height:44px;border:0;background:none;color:var(--navy);border-radius:50%;text-decoration:none}
+.icon-btn:hover{background:var(--blue-mist)}
+.icon-btn svg{width:24px;height:24px}
+.cart-count{position:absolute;top:3px;right:1px;min-width:19px;height:19px;padding:0 5px;border-radius:999px;background:var(--copper);color:#fff;font:700 11px/19px var(--sans);text-align:center}
+.menu-toggle{display:none}
+/* nav */
+.mainnav{border-top:1px solid var(--rule)}
+.mainnav>ul{display:flex;justify-content:center;gap:clamp(8px,2.4vw,40px);list-style:none;margin:0;padding:0}
+.mainnav>ul>li{position:static}
+.nav-top{display:flex;align-items:center;gap:6px;height:52px;padding:0 6px;border:0;background:none;color:var(--navy);font:600 16px var(--sans);text-decoration:none;position:relative}
+.nav-top::after{content:"";position:absolute;left:6px;right:6px;bottom:0;height:3px;background:var(--copper);transform:scaleX(0);transition:transform .2s;transform-origin:left}
+.nav-top svg{width:12px;height:12px;transition:transform .2s}
+li.open>.nav-top::after{transform:scaleX(1)}
+li.open>.nav-top svg{transform:rotate(180deg)}
+.mega{position:absolute;left:0;right:0;top:100%;background:#fff;border-top:1px solid var(--rule);box-shadow:0 24px 40px -24px rgba(0,43,69,.35);display:none}
+li.open>.mega{display:block}
+.mega-inner{display:grid;grid-template-columns:minmax(0,1fr) 420px;gap:56px;padding-top:36px;padding-bottom:40px}
+.mega h2{font-size:30px;margin-bottom:18px}
+.mega-links{list-style:none;margin:0;padding:0;columns:3 200px;column-gap:40px}
+.mega-links li{break-inside:avoid}
+.mega-links a{display:block;padding:9px 0;color:var(--text);text-decoration:none;border-bottom:1px solid var(--rule)}
+.mega-links a:hover{color:var(--navy);text-decoration:underline;text-decoration-color:var(--copper);text-underline-offset:4px}
+.mega-feature{display:grid;grid-template-columns:160px 1fr;gap:20px;align-items:start;text-decoration:none;color:var(--text)}
+.mega-feature img{width:160px;height:160px;object-fit:cover;border-radius:4px;background:var(--blue-mist)}
+.mega-feature p{font-size:15px;line-height:1.55;color:var(--muted);display:-webkit-box;-webkit-line-clamp:5;-webkit-box-orient:vertical;overflow:hidden}
+.mega-feature strong{display:block;font-family:var(--serif);font-weight:400;font-size:20px;color:var(--navy);margin-bottom:6px}
+.mega-feature .textlink{display:inline-block;margin-top:12px;font-size:15px}
+
+@media (max-width:900px){
+  .hdr{grid-template-columns:auto 1fr auto;padding-top:10px;padding-bottom:10px}
+  .hdr-logo{grid-column:2;justify-self:center}
+  .hdr-logo img{height:40px}
+  .hdr-search{display:none}
+  .menu-toggle{display:grid;grid-column:1;grid-row:1}
+  .hdr-icons{grid-row:1}
+  .hdr-icons .acct{display:none}
+  .mainnav{display:none}
+}
+@media (max-width:380px){.hdr-logo img{height:34px}}
+
+/* mobile drawer */
+.drawer-scrim{position:fixed;inset:0;background:rgba(0,43,69,.5);z-index:90;opacity:0;pointer-events:none;transition:opacity .25s}
+.drawer{position:fixed;top:0;bottom:0;left:0;width:min(400px,88vw);background:#fff;z-index:100;transform:translateX(-102%);transition:transform .3s ease;display:flex;flex-direction:column;overflow-y:auto}
+body.drawer-open .drawer{transform:none}
+body.drawer-open .drawer-scrim{opacity:1;pointer-events:auto}
+.drawer-head{display:flex;align-items:center;justify-content:space-between;padding:12px 16px;border-bottom:1px solid var(--rule)}
+.drawer-head img{height:34px;width:auto}
+.drawer details{border-bottom:1px solid var(--rule)}
+.drawer summary{list-style:none;display:flex;justify-content:space-between;align-items:center;padding:18px 20px;font-family:var(--serif);font-size:22px;color:var(--navy);cursor:pointer}
+.drawer summary::-webkit-details-marker{display:none}
+.drawer summary svg{width:14px;height:14px;transition:transform .2s}
+.drawer details[open] summary svg{transform:rotate(180deg)}
+.drawer details ul{list-style:none;margin:0;padding:0 20px 16px}
+.drawer details a{display:block;padding:10px 0 10px 14px;border-left:2px solid var(--blue-line);color:var(--text);text-decoration:none}
+.drawer details a.all{font-weight:600;color:var(--navy)}
+.drawer-util{padding:20px;display:grid;gap:12px;font-size:15px}
+.drawer-util a{color:var(--navy)}
+@media (prefers-reduced-motion:reduce){.drawer,.drawer-scrim{transition:none}}
+
+/* ===== Hero ===== */
+.hero{position:relative;min-height:clamp(560px,82vh,820px);display:flex;align-items:flex-end;color:#fff;overflow:hidden;background:var(--navy-deep)}
+.hero picture,.hero picture img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.hero picture img{object-position:62% 40%}
+.hero::before{content:"";position:absolute;inset:0;z-index:1;background:
+  linear-gradient(90deg,rgba(0,43,69,.94) 0%,rgba(0,43,69,.86) 34%,rgba(0,43,69,.25) 66%,rgba(0,43,69,0) 100%),
+  linear-gradient(0deg,rgba(0,43,69,.55),rgba(0,43,69,0) 40%)}
+.hero .wrap{position:relative;z-index:2;width:100%;padding-bottom:clamp(48px,8vh,96px);padding-top:80px}
+.hero-copy{max-width:640px}
+.hero-place{font-size:17px;font-weight:500;color:#e2ebf3;margin-bottom:18px;display:flex;align-items:center;gap:14px}
+.hero-place::before{content:"";width:44px;height:2px;background:var(--copper)}
+.hero h1{color:#fff;font-size:clamp(72px,11vw,168px);line-height:.92;letter-spacing:-.03em}
+.hero-tag{font-family:var(--serif);font-size:clamp(22px,2.4vw,32px);line-height:1.2;margin:22px 0 18px;color:#fff}
+.hero-lede{font-size:18px;line-height:1.6;color:#e7eef5;max-width:520px}
+.hero-ctas{display:flex;flex-wrap:wrap;gap:14px;margin-top:32px}
+@media (max-width:640px){
+  .hero{min-height:640px;align-items:flex-end}
+  .hero::before{background:linear-gradient(0deg,rgba(0,43,69,.97) 0%,rgba(0,43,69,.9) 52%,rgba(0,43,69,.35) 80%,rgba(0,43,69,.1) 100%)}
+  .hero-lede{font-size:16px}
+  .hero-ctas .btn{flex:1 1 100%}
+}
+
+/* value props */
+.props{border-bottom:1px solid var(--rule)}
+.props ul{list-style:none;margin:0 auto;padding:0;display:grid;grid-template-columns:repeat(3,1fr)}
+.props li{display:flex;align-items:center;justify-content:center;gap:14px;padding:22px 12px;font-weight:600;color:var(--navy);font-size:16px}
+.props li+li{border-left:1px solid var(--rule)}
+.props svg{width:30px;height:30px;color:var(--copper);flex:none}
+@media (max-width:760px){.props ul{grid-template-columns:1fr}.props li{justify-content:flex-start;padding:14px 4px}.props li+li{border-left:0;border-top:1px solid var(--rule)}}
+
+/* ===== Section scaffolding ===== */
+.sec{padding:clamp(64px,9vw,120px) 0}
+.sec-head{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,1fr);gap:24px 64px;align-items:end;margin-bottom:clamp(32px,4vw,52px)}
+.sec-head p{font-size:18px;color:var(--muted);max-width:56ch}
+.sec-head .textlink{white-space:nowrap}
+@media (max-width:860px){.sec-head{grid-template-columns:1fr}}
+
+/* product cards */
+.grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:40px 24px}
+.card{position:relative;display:flex;flex-direction:column}
+.card-img{display:block;aspect-ratio:1/1;background:var(--blue-mist);overflow:hidden;border-radius:4px}
+.card-img img{width:100%;height:100%;object-fit:cover;transition:transform .5s ease}
+.card:hover .card-img img{transform:scale(1.035)}
+.card h3{font-family:var(--sans);font-weight:600;font-size:16px;line-height:1.35;color:var(--text);margin:14px 0 4px}
+.card h3 a{text-decoration:none}
+.card h3 a::after{content:"";position:absolute;inset:0;z-index:1}
+.card h3 a:hover{text-decoration:underline}
+.card-meta{display:flex;align-items:baseline;gap:10px;font-size:15px}
+.price{color:var(--copper-deep);font-weight:700;font-size:16px}
+.card-opts{color:var(--muted);font-size:14px}
+.card-act{position:relative;z-index:2;margin-top:14px;align-self:flex-start;min-height:42px;padding:9px 18px;border-radius:999px;border:1.5px solid var(--navy);background:#fff;color:var(--navy);font-weight:600;font-size:15px;text-decoration:none;display:inline-flex;align-items:center}
+.card-act:hover{background:var(--navy);color:#fff}
+@media (max-width:1100px){.grid{gap:32px 18px}}
+@media (max-width:760px){
+  .grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:28px 14px}
+  .card h3{font-size:15px}
+  .card-act{padding:8px 14px;font-size:14px}
+}
+/* rail on mobile */
+@media (max-width:760px){
+  .rail{display:grid;grid-auto-flow:column;grid-auto-columns:62%;grid-template-columns:none;overflow-x:auto;scroll-snap-type:x mandatory;scroll-padding-inline:var(--gutter);gap:16px;margin:0 calc(var(--gutter)*-1);padding:0 var(--gutter) 8px;scrollbar-width:thin}
+  .rail>*{scroll-snap-align:start}
+}
+
+/* ===== Christmas ===== */
+.xmas{background:#fff}
+
+/* ===== Craft band ===== */
+.craft{background:var(--navy);color:#fff;overflow:hidden}
+.craft .wrap{display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);gap:clamp(40px,6vw,96px);align-items:center}
+.craft h2{color:#fff;font-size:clamp(36px,4.6vw,64px)}
+.craft h2 span{display:block}
+.craft h2 span+span{color:#bcd3e6}
+.craft p{color:#dbe6ef;font-size:18px;margin-top:24px;max-width:48ch}
+.craft .btn{margin-top:32px}
+.film{position:relative;padding:14px;background:var(--copper);border-radius:6px}
+.film-inner{position:relative;aspect-ratio:16/9;overflow:hidden;border-radius:2px;background:#000}
+.film-inner img{width:100%;height:100%;object-fit:cover;filter:saturate(.9)}
+.film-inner::after{content:"";position:absolute;inset:0;background:linear-gradient(0deg,rgba(0,43,69,.75),rgba(0,43,69,.05) 55%)}
+.play{position:absolute;inset:0;margin:auto;z-index:2;width:88px;height:88px;border-radius:50%;border:0;background:#fff;color:var(--navy);display:grid;place-items:center;box-shadow:0 10px 30px rgba(0,0,0,.35);transition:transform .2s}
+.play:hover{transform:scale(1.06)}
+.play svg{width:30px;height:30px;margin-left:5px}
+.film-cap{position:absolute;left:24px;right:24px;bottom:18px;z-index:2;font-family:var(--serif);font-size:20px;color:#fff}
+.film-note{margin-top:14px;color:#bcd3e6;font-size:14px}
+@media (max-width:860px){.craft .wrap{grid-template-columns:1fr}.play{width:68px;height:68px}.film-cap{font-size:17px;left:16px;bottom:12px}}
+
+/* ===== Category tiles ===== */
+.cats-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:20px}
+.cat{position:relative;display:block;aspect-ratio:3/4;overflow:hidden;border-radius:4px;color:#fff;text-decoration:none;background:var(--navy)}
+.cat img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:transform .6s ease}
+.cat:hover img{transform:scale(1.04)}
+.cat::after{content:"";position:absolute;inset:0;background:linear-gradient(0deg,rgba(0,43,69,.92) 0%,rgba(0,43,69,.55) 34%,rgba(0,43,69,0) 62%)}
+.cat-text{position:absolute;left:24px;right:24px;bottom:22px;z-index:2}
+.cat-text strong{display:block;font-family:var(--serif);font-weight:400;font-size:clamp(26px,2.6vw,36px);line-height:1.05}
+.cat-text span{display:inline-flex;margin-top:10px;font-size:15px;font-weight:500;color:#e2ebf3;border-bottom:2px solid var(--copper);padding-bottom:2px}
+@media (max-width:1000px){.cats-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.cat{aspect-ratio:4/4}}
+@media (max-width:480px){.cats-grid{gap:12px}.cat-text{left:14px;right:14px;bottom:14px}.cat-text strong{font-size:22px}.cat-text span{font-size:13px}}
+
+/* ===== Story timeline (bridge) ===== */
+.story{background:var(--blue-mist);position:relative;overflow:hidden}
+.story-head{text-align:center;max-width:760px;margin:0 auto clamp(40px,5vw,64px)}
+.story-head p{font-size:18px;color:var(--muted);margin-top:18px}
+.span{position:relative}
+.bridge{display:block;width:100%;height:auto;color:var(--navy)}
+.bridge .cable{fill:none;stroke:var(--navy);stroke-width:2.5}
+.bridge .hanger{stroke:var(--navy);stroke-width:1;opacity:.45}
+.bridge .tower{fill:var(--navy)}
+.bridge .deck{stroke:var(--navy);stroke-width:5}
+.bridge .water{stroke:var(--blue);stroke-width:1.5;opacity:.6;fill:none}
+.js .bridge .cable{stroke-dasharray:1400;stroke-dashoffset:1400;transition:stroke-dashoffset 2.2s cubic-bezier(.4,0,.2,1)}
+.js .span.drawn .bridge .cable{stroke-dashoffset:0}
+.timeline{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:32px;margin-top:-6px}
+.timeline li{position:relative;padding-top:30px}
+.timeline li::before{content:"";position:absolute;top:-4px;left:0;width:16px;height:16px;border-radius:50%;background:var(--copper);box-shadow:0 0 0 5px var(--blue-mist)}
+.year{display:block;font-family:var(--serif);font-size:clamp(44px,5vw,72px);line-height:1;color:var(--navy);letter-spacing:-.02em}
+.timeline p{margin-top:14px;font-size:16px;line-height:1.6;max-width:32ch}
+.story-foot{margin-top:56px;display:flex;flex-wrap:wrap;gap:16px;align-items:center;justify-content:center}
+@media (max-width:860px){
+  .bridge{display:none}
+  .timeline{grid-template-columns:1fr;gap:36px;margin-top:0;padding-left:34px;border-left:2px solid var(--navy)}
+  .timeline li{padding-top:0}
+  .timeline li::before{left:-43px;top:14px}
+  .timeline p{max-width:none}
+}
+
+/* ===== Most popular ===== */
+.popular-grid{display:grid;grid-template-columns:minmax(0,1.25fr) minmax(0,1fr) minmax(0,1fr);grid-template-rows:auto auto;gap:40px 24px}
+.popular-grid .card.lead{grid-row:span 2}
+.card.lead .card-img{aspect-ratio:auto;flex:1;min-height:420px}
+.card.lead h3{font-family:var(--serif);font-weight:400;font-size:clamp(26px,2.4vw,34px);color:var(--navy);margin-top:18px}
+.lead-note{font-size:16px;color:var(--muted);margin:6px 0 4px;max-width:46ch}
+@media (max-width:1000px){.popular-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.popular-grid .card.lead{grid-column:1/-1;grid-row:auto}.card.lead .card-img{min-height:0;aspect-ratio:16/10;flex:none}}
+@media (max-width:760px){.popular-grid{gap:28px 14px}}
+
+/* ===== Club ===== */
+.club{background:#fff;border-top:1px solid var(--rule)}
+.club .wrap{display:grid;grid-template-columns:minmax(0,.8fr) minmax(0,1.6fr);gap:clamp(32px,5vw,80px);align-items:start}
+.club-intro p{font-size:18px;color:var(--muted);margin-top:20px}
+.club-box{margin-top:28px;display:flex;gap:16px;align-items:center;padding:18px 20px;border-left:4px solid var(--copper);background:var(--copper-tint);font-size:16px;color:var(--text)}
+.plans{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px}
+.plan{position:relative;display:flex;flex-direction:column;border:1px solid var(--blue-line);border-radius:6px;overflow:hidden;background:#fff;transition:border-color .2s}
+.plan:hover{border-color:var(--navy)}
+.plan img{aspect-ratio:4/3;object-fit:cover;width:100%;background:var(--blue-mist)}
+.plan-body{padding:20px 20px 22px;display:flex;flex-direction:column;flex:1}
+.plan-freq{font-family:var(--serif);font-size:44px;line-height:1;color:var(--navy)}
+.plan-freq small{font-family:var(--sans);font-size:15px;color:var(--muted);margin-left:6px}
+.plan h3{font-family:var(--sans);font-size:16px;font-weight:600;color:var(--text);margin:12px 0 4px}
+.plan h3 a{text-decoration:none}
+.plan h3 a::after{content:"";position:absolute;inset:0}
+.plan .price{font-size:20px}
+.plan .card-act{margin-top:auto;position:relative;z-index:2}
+.plan .price{margin-bottom:18px}
+@media (max-width:1100px){.club .wrap{grid-template-columns:1fr}.club-intro{max-width:640px}}
+@media (max-width:640px){.plans{grid-template-columns:1fr}.plan{display:grid;grid-template-columns:120px 1fr}.plan img{height:100%;aspect-ratio:auto}.plan-freq{font-size:34px}}
+
+/* ===== Gifting ===== */
+.gifts{background:#fff}
+.gifts .wrap{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:clamp(32px,6vw,96px);align-items:center}
+.gift-collage{display:grid;grid-template-columns:1.3fr 1fr;grid-template-rows:1fr 1fr;gap:16px;aspect-ratio:1/1}
+.gift-collage a{position:relative;overflow:hidden;border-radius:4px;background:var(--blue-mist);display:block}
+.gift-collage a:first-child{grid-row:span 2}
+.gift-collage img{width:100%;height:100%;object-fit:cover}
+.gift-collage span{position:absolute;left:12px;bottom:12px;background:#fff;color:var(--navy);font-size:14px;font-weight:600;padding:6px 12px;border-radius:999px}
+.gifts p.lede{font-size:18px;color:var(--muted);margin-top:20px;max-width:52ch}
+.gift-list{list-style:none;margin:28px 0 0;padding:0;display:grid;grid-template-columns:1fr 1fr;gap:0 28px}
+.gift-list li{padding:12px 0 12px 28px;border-bottom:1px solid var(--rule);position:relative;font-size:16px}
+.gift-list li::before{content:"";position:absolute;left:0;top:20px;width:12px;height:2px;background:var(--copper)}
+.gift-ctas{display:flex;flex-wrap:wrap;gap:14px;margin-top:32px;align-items:center}
+.gift-phone{font-size:16px;color:var(--muted);margin-top:18px}
+.gift-phone a{color:var(--navy);font-weight:600}
+@media (max-width:900px){.gifts .wrap{grid-template-columns:1fr}.gift-list{grid-template-columns:1fr}}
+
+/* ===== Testimonial ===== */
+.quote{background:var(--navy-deep);color:#fff;text-align:center}
+.quote figure{margin:0 auto;max-width:980px}
+.quote svg{width:56px;height:44px;color:var(--blue);margin:0 auto 28px}
+.quote blockquote{margin:0;font-family:var(--serif);font-size:clamp(26px,3.4vw,44px);line-height:1.25;color:#fff}
+.quote figcaption{margin-top:28px;font-size:17px;color:#cfdeeb}
+.quote figcaption::before{content:"";display:block;width:44px;height:2px;background:var(--copper);margin:0 auto 16px}
+
+/* ===== New ===== */
+.new{background:#fff}
+
+/* ===== Visit ===== */
+.visit{background:var(--blue-mist)}
+.visit .wrap{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:clamp(32px,6vw,96px);align-items:center}
+.visit-badge{background:#fff;border-radius:6px;padding:clamp(28px,5vw,64px);display:grid;place-items:center}
+.visit-badge img{width:100%;max-width:520px;height:auto}
+.visit p.lede{font-size:18px;color:var(--muted);margin-top:20px;max-width:46ch}
+.visit address{font-style:normal;font-family:var(--serif);font-size:clamp(24px,2.4vw,32px);line-height:1.3;color:var(--navy);margin-top:32px}
+.visit-phone{margin-top:16px;font-size:18px}
+.visit-phone a{color:var(--navy);font-weight:600}
+.visit .gift-ctas{margin-top:28px}
+@media (max-width:860px){.visit .wrap{grid-template-columns:1fr}}
+
+/* ===== Newsletter ===== */
+.news{background:#fff;border-top:1px solid var(--rule)}
+.news .wrap{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:32px 64px;align-items:center}
+.news h2{font-size:clamp(30px,3.4vw,44px)}
+.news p{color:var(--muted);font-size:17px;margin-top:12px}
+.news form{display:flex;gap:12px}
+.news input{flex:1;min-width:0;height:52px;border:1.5px solid var(--blue-line);border-radius:999px;padding:0 22px;font:inherit;color:var(--text)}
+.news input:focus{outline:none;border-color:var(--navy);box-shadow:0 0 0 3px rgba(92,140,180,.35)}
+.news-msg{margin-top:10px;font-size:15px;color:var(--navy);min-height:1.5em}
+@media (max-width:860px){.news .wrap{grid-template-columns:1fr}}
+@media (max-width:480px){.news form{flex-direction:column}.news .btn{width:100%}}
+
+/* ===== Footer ===== */
+.footer{background:var(--navy);color:#e2ebf3;font-size:15px}
+.footer .wrap{padding-top:64px;padding-bottom:32px}
+.foot-grid{display:grid;grid-template-columns:1.3fr 1fr 1fr 1fr;gap:40px}
+.foot-card{background:#fff;border-radius:6px;padding:20px;display:inline-block;max-width:260px}
+.foot-card img{width:100%;height:auto}
+.foot-brand address{font-style:normal;margin-top:20px;line-height:1.7}
+.foot-brand a{color:#fff}
+.footer h2{font-family:var(--serif);font-size:20px;color:#fff;margin-bottom:16px}
+.footer ul{list-style:none;margin:0;padding:0;display:grid;gap:10px}
+.footer ul a{color:#e2ebf3;text-decoration:none}
+.footer ul a:hover{color:#fff;text-decoration:underline}
+.fb{display:inline-flex;align-items:center;gap:10px;color:#fff;text-decoration:none;border:1.5px solid rgba(255,255,255,.5);border-radius:999px;padding:10px 18px}
+.fb:hover{background:rgba(255,255,255,.1)}
+.fb svg{width:20px;height:20px}
+.foot-base{margin-top:56px;padding-top:24px;border-top:1px solid rgba(255,255,255,.2);display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px;color:#bcd3e6;font-size:14px}
+@media (max-width:1000px){.foot-grid{grid-template-columns:1fr 1fr}}
+@media (max-width:560px){.foot-grid{grid-template-columns:1fr}}
+
+/* toast */
+.toast{visibility:hidden;position:fixed;left:50%;bottom:24px;transform:translate(-50%,140%);background:var(--navy);color:#fff;padding:14px 22px;border-radius:999px;z-index:120;font-weight:500;box-shadow:0 12px 30px rgba(0,43,69,.35);transition:transform .3s;max-width:calc(100vw - 32px);text-align:center}
+.toast.show{visibility:visible;transform:translate(-50%,0)}
+@media (prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important}.js .bridge .cable{stroke-dashoffset:0}}
+
+/* ===== Product page ===== */
+.crumbs{padding-top:22px;font-size:14px;color:var(--muted)}
+.crumbs ol{list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;gap:8px}
+.crumbs li+li::before{content:"/";margin-right:8px;color:var(--blue-line)}
+.crumbs a{color:var(--muted)}
+.pdp{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,1fr);gap:clamp(32px,5vw,80px);padding-top:24px;padding-bottom:clamp(56px,7vw,96px);align-items:start}
+.gallery{position:sticky;top:150px;display:grid;grid-template-columns:84px minmax(0,1fr);gap:16px}
+.thumbs{grid-column:1;grid-row:1;display:grid;gap:12px;align-content:start;list-style:none;margin:0;padding:0}
+.stage{grid-column:2;grid-row:1}
+.thumbs button{width:84px;height:84px;padding:0;border:2px solid transparent;border-radius:4px;overflow:hidden;background:var(--blue-mist)}
+.thumbs button[aria-current="true"]{border-color:var(--navy)}
+.thumbs img{width:100%;height:100%;object-fit:cover}
+.thumbs li:nth-child(2) img{transform:scale(1.9);transform-origin:50% 38%}
+.stage{aspect-ratio:1/1;background:var(--blue-mist);border-radius:6px;overflow:hidden}
+.stage img{width:100%;height:100%;object-fit:cover;transition:transform .35s}
+.stage.zoom img{transform:scale(1.9);transform-origin:50% 38%}
+.since{display:flex;align-items:center;gap:12px;margin:4px 0 0;color:var(--muted);font-size:15px;grid-column:2;grid-row:2}
+.since::before{content:"";width:32px;height:2px;background:var(--copper)}
+@media (max-width:900px){
+  .pdp{grid-template-columns:1fr}
+  .gallery{position:static;grid-template-columns:1fr}
+  .stage{grid-column:1;grid-row:1}
+  .thumbs{grid-column:1;grid-row:2;grid-auto-flow:column;justify-content:start}
+  .thumbs button{width:68px;height:68px}
+  .since{grid-column:1;grid-row:3}
+}
+.buy h1{font-size:clamp(38px,4.4vw,60px);line-height:1.02}
+.buy-price{display:flex;align-items:baseline;gap:14px;margin-top:16px}
+.buy-price .price{font-size:26px}
+.buy-price span:last-child{color:var(--muted);font-size:15px}
+.buy-desc{font-size:17px;margin-top:20px;max-width:52ch}
+.buy form{margin-top:28px;display:grid;gap:26px}
+fieldset{border:0;margin:0;padding:0;min-width:0}
+legend,.flabel{font-weight:600;color:var(--navy);font-size:16px;margin-bottom:12px;padding:0;display:flex;justify-content:space-between;width:100%}
+legend span{font-weight:400;color:var(--text)}
+.swatches{display:flex;flex-wrap:wrap;gap:10px}
+.swatches label{position:relative}
+.swatches input{position:absolute;opacity:0;width:1px;height:1px}
+.swatches span{display:inline-flex;align-items:center;min-height:44px;padding:8px 16px;border:1.5px solid var(--blue-line);border-radius:999px;font-size:15px;cursor:pointer;background:#fff;transition:border-color .15s,background .15s}
+.swatches span:hover{border-color:var(--navy)}
+.swatches input:checked+span{border-color:var(--navy);background:var(--navy);color:#fff}
+.swatches input:focus-visible+span{outline:3px solid var(--blue);outline-offset:3px}
+.row2{display:grid;grid-template-columns:auto minmax(0,1fr);gap:20px;align-items:end}
+.qty{display:inline-flex;align-items:center;border:1.5px solid var(--blue-line);border-radius:999px;height:52px}
+.qty button{width:46px;height:100%;border:0;background:none;color:var(--navy);font-size:22px;border-radius:999px}
+.qty button:hover{background:var(--blue-mist)}
+.qty input{width:44px;text-align:center;border:0;font:600 17px var(--sans);color:var(--text);-moz-appearance:textfield}
+.qty input::-webkit-outer-spin-button,.qty input::-webkit-inner-spin-button{-webkit-appearance:none;margin:0}
+.select{position:relative}
+.select select{width:100%;height:52px;appearance:none;-webkit-appearance:none;border:1.5px solid var(--blue-line);border-radius:999px;padding:0 48px 0 20px;font:inherit;color:var(--text);background:#fff}
+.select svg{position:absolute;right:20px;top:50%;width:14px;height:14px;transform:translateY(-50%);pointer-events:none;color:var(--navy)}
+.select select:focus{outline:none;border-color:var(--navy);box-shadow:0 0 0 3px rgba(92,140,180,.35)}
+.hint{font-size:14px;color:var(--muted);margin-top:8px}
+@media (max-width:480px){.row2{grid-template-columns:1fr}}
+.giftbox{border:1.5px solid var(--blue-line);border-radius:8px;padding:16px 18px;background:#fff}
+.giftbox.on{border-color:var(--copper);background:var(--copper-tint)}
+.check{display:flex;gap:12px;align-items:center;font-weight:600;color:var(--navy);cursor:pointer}
+.check input{width:22px;height:22px;accent-color:var(--navy)}
+.gift-fields{margin-top:14px}
+.gift-fields[hidden]{display:none}
+.gift-fields textarea{width:100%;min-height:104px;border:1.5px solid var(--blue-line);border-radius:6px;padding:12px 14px;font:inherit;color:var(--text);resize:vertical;background:#fff}
+.gift-fields textarea:focus{outline:none;border-color:var(--navy);box-shadow:0 0 0 3px rgba(92,140,180,.35)}
+.gift-meta{display:flex;justify-content:space-between;font-size:14px;color:var(--muted);margin-top:6px}
+.atc{width:100%;min-height:58px;font-size:17px}
+.trust{list-style:none;margin:6px 0 0;padding:0;display:grid;gap:8px;font-size:15px;color:var(--muted)}
+.trust li{display:flex;gap:10px;align-items:center}
+.trust svg{width:20px;height:20px;color:var(--copper);flex:none}
+.acc{margin-top:36px;border-top:1px solid var(--rule)}
+.acc details{border-bottom:1px solid var(--rule)}
+.acc summary{list-style:none;display:flex;justify-content:space-between;align-items:center;padding:18px 0;font-family:var(--serif);font-size:20px;color:var(--navy);cursor:pointer}
+.acc summary::-webkit-details-marker{display:none}
+.acc summary svg{width:14px;height:14px;transition:transform .2s}
+.acc details[open] summary svg{transform:rotate(180deg)}
+.acc details p{padding-bottom:18px;max-width:60ch}
+.more{background:var(--blue-mist)}
+/* cart drawer */
+.cart{position:fixed;top:0;right:0;bottom:0;width:min(440px,100vw);background:#fff;z-index:110;transform:translateX(102%);transition:transform .3s ease;display:flex;flex-direction:column}
+body.cart-open .cart{transform:none}
+body.cart-open .cart-scrim{opacity:1;pointer-events:auto}
+.cart-scrim{position:fixed;inset:0;background:rgba(0,43,69,.5);z-index:105;opacity:0;pointer-events:none;transition:opacity .25s}
+.cart-head{display:flex;justify-content:space-between;align-items:center;padding:18px 20px;border-bottom:1px solid var(--rule)}
+.cart-head h2{font-size:26px}
+.cart-body{flex:1;overflow-y:auto;padding:20px}
+.line{display:grid;grid-template-columns:88px 1fr;gap:16px;padding-bottom:20px;border-bottom:1px solid var(--rule);margin-bottom:20px}
+.line img{width:88px;height:88px;object-fit:cover;border-radius:4px;background:var(--blue-mist)}
+.line h3{font-family:var(--sans);font-weight:600;font-size:16px;color:var(--text)}
+.line dl{margin:6px 0 0;font-size:14px;color:var(--muted);display:grid;grid-template-columns:auto 1fr;gap:2px 10px}
+.line dt{font-weight:600;color:var(--text)}
+.line dd{margin:0;overflow-wrap:anywhere}
+.cart-foot{padding:20px;border-top:1px solid var(--rule);display:grid;gap:12px}
+.sub{display:flex;justify-content:space-between;font-weight:600;font-size:18px;color:var(--navy)}
+.cart-foot .hint{margin:0}
+@media (prefers-reduced-motion:reduce){.cart,.cart-scrim,.stage img{transition:none}}
+</style>
+</head>
+<body>
+<div role="note" style="position:relative;z-index:99999;background:#976036;color:#fff;font:600 13px/1.4 system-ui,sans-serif;text-align:center;padding:6px max(16px,env(safe-area-inset-left,0px));">Design prototype by Helios for Marshall's Fudge &amp; Chocolate Co. Not a live store: links, search and checkout are placeholders. <a href="../../../index.html" style="color:#fff;text-decoration:underline;">Back to all directions</a></div>
+<a class="skip" href="#main">Skip to content</a>
+<div class="utility">
+  <div class="wrap">
+    <a href="#" id="u-phone" class="u-phone"></a>
+    <span class="utility-tag" id="u-tag"></span>
+    <nav aria-label="Utility"><ul id="u-links"></ul></nav>
+  </div>
+</div>
+
+<header class="site-header">
+  <div class="wrap hdr">
+    <button class="icon-btn menu-toggle" id="menu-open" aria-label="Open menu" aria-controls="drawer" aria-expanded="false">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+    </button>
+    <form class="hdr-search" role="search" onsubmit="return false">
+      <label class="vh" for="q">Search the shop</label>
+      <input id="q" type="search" placeholder="Search fudge, chocolates, gifts">
+      <button type="submit" aria-label="Search"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg></button>
+    </form>
+    <a class="hdr-logo" href="index.html"><img id="logo" alt="Marshall's Fudge & Chocolate Co., home" width="372" height="59"></a>
+    <div class="hdr-icons">
+            <a class="icon-btn acct" href="#" aria-label="My account"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="8" r="4"/><path d="M4 21c1.5-4 4.5-6 8-6s6.5 2 8 6"/></svg></a>
+      <a class="icon-btn" href="#" aria-label="Cart, 0 items" id="cart-link"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"><path d="M5 8h14l-1.2 12H6.2z"/><path d="M9 8V6a3 3 0 0 1 6 0v2"/></svg><span class="cart-count" id="cart-count">0</span></a>
+    </div>
+  </div>
+  <nav class="mainnav" aria-label="Main"><ul id="nav"></ul></nav>
+</header>
+
+<div class="drawer-scrim" id="scrim"></div>
+<aside class="drawer" id="drawer" aria-label="Menu" aria-hidden="true">
+  <div class="drawer-head">
+    <img id="d-logo" alt="Marshall's Fudge & Chocolate Co." width="214" height="34">
+    <button class="icon-btn" id="menu-close" aria-label="Close menu"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M6 6l12 12M18 6 6 18"/></svg></button>
+  </div>
+  <div id="d-nav"></div>
+  <div class="drawer-util" id="d-util"></div>
+</aside>
+
+<main id="main">
+  <div class="wrap">
+    <nav class="crumbs" aria-label="Breadcrumb"><ol><li><a href="index.html">Home</a></li><li><a href="index.html#christmas">Christmas</a></li><li aria-current="page" id="crumb-p"></li></ol></nav>
+    <div class="pdp">
+      <div class="gallery">
+        <div class="stage" id="stage"><img id="main-img" alt="" width="900" height="900"></div>
+        <ul class="thumbs" id="thumbs" aria-label="Product images"></ul>
+        <p class="since" id="since"></p>
+      </div>
+
+      <div class="buy">
+        <h1 id="p-title"></h1>
+        <div class="buy-price"><span class="price" id="p-price"></span><span>Made by hand in Mackinaw City, Michigan</span></div>
+        <p class="buy-desc" id="p-desc"></p>
+
+        <form id="buy-form" novalidate>
+          <fieldset id="opt-set">
+            <legend>Design <span id="opt-current"></span></legend>
+            <div class="swatches" id="swatches"></div>
+          </fieldset>
+
+          <div class="row2">
+            <div>
+              <span class="flabel" id="qty-l">Quantity</span>
+              <div class="qty" role="group" aria-labelledby="qty-l">
+                <button type="button" id="qminus" aria-label="Decrease quantity">&minus;</button>
+                <input id="qty" type="number" min="1" max="99" value="1" inputmode="numeric" aria-label="Quantity">
+                <button type="button" id="qplus" aria-label="Increase quantity">+</button>
+              </div>
+            </div>
+            <div>
+              <label class="flabel" for="shipweek">Ship week</label>
+              <div class="select">
+                <select id="shipweek" aria-describedby="ship-hint"></select>
+                <svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M2 4l4 4 4-4"/></svg>
+              </div>
+            </div>
+          </div>
+          <p class="hint" id="ship-hint" style="margin-top:-14px">Buy now, ship later. Pick the week you want this order to ship.</p>
+
+          <div class="giftbox" id="giftbox">
+            <label class="check"><input type="checkbox" id="isgift" aria-controls="gift-fields" aria-expanded="false"> This order is a gift</label>
+            <div class="gift-fields" id="gift-fields" hidden>
+              <label class="flabel" for="giftmsg" style="margin-bottom:8px">Gift message <span style="font-weight:400;color:var(--muted)">optional</span></label>
+              <textarea id="giftmsg" maxlength="250" aria-describedby="gift-count" placeholder="Merry Christmas from all of us. A taste of Michigan."></textarea>
+              <div class="gift-meta"><span>We include your message with the order.</span><span id="gift-count">0 / 250</span></div>
+            </div>
+          </div>
+
+          <button class="btn btn-navy atc" type="submit" id="atc"></button>
+          <ul class="trust" id="trust"></ul>
+        </form>
+
+        <div class="acc">
+          <details open><summary>Made the Marshall's way<svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M2 4l4 4 4-4"/></svg></summary><p id="acc-made"></p></details>
+          <details><summary>Ship weeks and gift messages<svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M2 4l4 4 4-4"/></svg></summary><p>Order today and choose the week it ships, so gifts arrive when you want them. Add a gift message and we'll include it with the order. See <a href="#">Shipping &amp; Returns</a> for details.</p></details>
+          <details><summary>Ordering for a business?<svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M2 4l4 4 4-4"/></svg></summary><p>We can ship to multiple locations and add personalized cards. Call <a href="#" class="tel"></a> or browse <a href="index.html#gifts">business gifts</a>.</p></details>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <section class="sec more" aria-labelledby="more-h">
+    <div class="wrap">
+      <div class="sec-head">
+        <h2 id="more-h">More Christmas treats</h2>
+        <p><a class="textlink" href="index.html#christmas" id="xmas-all"></a></p>
+      </div>
+      <div class="grid rail" id="more-grid"></div>
+    </div>
+  </section>
+</main>
+
+<footer class="footer">
+  <div class="wrap">
+    <div class="foot-grid">
+      <div class="foot-brand">
+        <div class="foot-card"><img id="f-logo" alt="Marshall's Fudge & Chocolate Co." loading="lazy" width="2000" height="1247"></div>
+        <address id="f-addr"></address>
+      </div>
+      <div><h2>Shop</h2><ul id="f-cats"></ul></div>
+      <div><h2>Help</h2><ul id="f-util"></ul></div>
+      <div><h2>Follow along</h2><a class="fb" id="f-fb" href="#" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M13.5 21v-7.5h2.6l.4-3h-3V8.6c0-.9.3-1.5 1.5-1.5h1.6V4.4c-.3 0-1.2-.1-2.3-.1-2.3 0-3.9 1.4-3.9 4V10.5H7.8v3h2.6V21z"/></svg>Facebook</a></div>
+    </div>
+    <div class="foot-base"><span id="f-copy"></span><span id="f-tag"></span></div>
+  </div>
+</footer>
+
+<div class="cart-scrim" id="cart-scrim"></div>
+<aside class="cart" id="cart" aria-label="Your cart" aria-hidden="true">
+  <div class="cart-head"><h2>Your cart</h2><button class="icon-btn" id="cart-close" aria-label="Close cart"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M6 6l12 12M18 6 6 18"/></svg></button></div>
+  <div class="cart-body" id="cart-body"></div>
+  <div class="cart-foot">
+    <div class="sub"><span>Subtotal</span><span id="cart-sub">$0.00</span></div>
+    <p class="hint">Shipping and taxes are calculated at checkout.</p>
+    <button class="btn btn-navy" type="button" id="checkout">Check out</button>
+    <button class="btn btn-ghost" type="button" id="keep">Keep shopping</button>
+  </div>
+</aside>
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+<script>
+const DATA = {"brand":{"name":"Marshall's Fudge & Chocolate Co.","tagline":"An Original Mackinac Island Fudge Since 1923","colors":{"navy":"#003a5d","lightBlue":"#5c8cb4","copper":"#976036","white":"#ffffff"},"phone":"(800) 343-8343 (800-34 FUDGE)","address":"308 E Central Ave, Mackinaw City, MI 49701","facebook":"https://www.facebook.com/marshallsfudge","logos":{"primary":"../brand/marshalls-logo-primary.png","badge":"../brand/marshalls-logo-badge-tagline.png","horizontal":"../brand/marshalls-logo-horizontal.png","webHorizontal":"../../assets/mf-logo-horizontal.webp","webPrimary":"../../assets/mf-logo-primary.webp"},"logoNote":"PNG logos have a WHITE background (not transparent): place them on white/light areas only, or inside a white badge/card."},"heroImages":["../../assets/mf-hero-slide-1.jpg","../../assets/mf-hero-slide-2.jpg","../../assets/mf-hero-slide-3.webp","../../assets/mf-hero-slide-4.webp","../../assets/mf-hero-slide-5.webp"],"video":{"title":"How it's Made, Peanut Brittle Edition","note":"Vimeo embed on the current site; use a placeholder frame with a play button"},"testimonial":{"quote":"Marshall's Mackinac Fudge is my perfect client and corporate gift giving during the holidays and throughout the year. I put 'A Taste of Michigan' on the card.","author":"Steve S., Norman, OK"},"aboutShort":"Marshall's legendary Mackinac Island fudge is 3rd generation family owned and operated. Following recipes passed down over our 100 year history, skilled chocolatier and candy makers combine the finest ingredients, with no preservatives, to create a tasteable difference.","story":["1923: Jim Marshall starts as a candy maker at Mackinac Island's very first candy shop","1952: Jim, Oradelle and son Dean open Marshall's Driftwood Fudge on Main Street, Mackinac Island","1965: store opens on East Central Avenue, Mackinaw City, where it still is today","Today: owned and run by Daisy (Jim's granddaughter) and her husband Pat; fudge cooked in copper kettles and finished on marble tables"],"club":{"name":"Fudge of the Month Club","text":"2 slices of fudge delivered by mail each month, packed in our trademark blue box. 3, 6 or 12-month memberships.","plans":[{"title":"Fudge Out (4x a Year)","handle":"fudge-out-4x-a-year","price":"$135.00","options":[],"image":"../../../img/e1e938aaa314d679.jpg"},{"title":"Fudgies Fantasy (6 x a Year)","handle":"fudgies-fantasy-6-x-a-year","price":"$185.00","options":[],"image":"../../../img/3df6330ce58274ad.jpg"},{"title":"Fudgies' Fantasy (12x a Year)","handle":"fudgies-fantasy-12x-a-year","price":"$325.00","options":[],"image":"../../../img/a1c29db21eabc635.jpg"}]},"mostPopular":[{"title":"Chocolate Plain Fudge","handle":"chocolate-plain-fudge","price":"$14.50","options":[],"image":"../../../img/0a17688755856922.png"},{"title":"Chocolate English Walnut Fudge","handle":"chocolate-english-walnut-fudge","price":"$14.50","options":[],"image":"../../../img/e21d9ac2d24edd38.png"},{"title":"Chocolate Peanut Butter Fudge","handle":"chocolate-peanut-butter-fudge","price":"$14.50","options":[],"image":"../../../img/5e77c80c97123705.png"},{"title":"Chocolate Pecan Fudge","handle":"chocolate-pecan-fudge","price":"$14.50","options":[],"image":"../../../img/f670fc2b26be2baa.jpg"},{"title":"Marshall's Sampler (4 Slice)","handle":"marshalls-sampler-4-slice","price":"$58.00","options":[],"image":"../../../img/3e7c1f6c757cf5c3.png"}],"newProducts":[{"title":"Birthday Cake Fudge","handle":"birthday-cake-fudge","price":"$14.50","options":[],"image":"../../../img/9a967cae5d20f007.jpg"},{"title":"Strawberry Creams (Dark Chocolate)","handle":"strawberry-creams-dark-chocolate","price":"$21.50","options":[{"name":"Chocolate Weight","values":["Half Pound","One Pound","Two Pounds"]}],"image":"../../../img/1019385a9d508b84.jpg"},{"title":"Chocolate Sea Salt Caramel Apple (Set of 2)","handle":"chocolate-sea-salt-caramel-apple-set-of-2","price":"$24.00","options":[],"image":"../../../img/01d77903589cbc9e.jpg"},{"title":"Sugar Free Cashew Cluster (Milk Chocolate)","handle":"sugar-free-cashew-cluster-milk-chocolate","price":"$21.50","options":[{"name":"Chocolate Weight","values":["Half Pound","One Pound","Two Pounds"]}],"image":"../../../img/98b4b928fd727fcb.jpg"}],"valueProps":["Original Mackinac Island Fudge","Great Value","Fast Shipping"],"cartFeatures":["Ship week picker (buy now, ship later)","Gift message"],"megaMenu":[{"title":"Fudge","collection":"fudge","children":[{"title":"Original Mackinac Island Fudge","collection":"original-mackinac-island-fudge"},{"title":"Sugar Free Fudge","collection":"sf-fudge"},{"title":"Other Hand Crafted Candies","collection":"other-hand-crafted-candies"},{"title":"Fudge of the Month Club","collection":"fudge-of-the-month-club"}]},{"title":"Chocolates","collection":"chocolates","children":[{"title":"Handmade Chocolates","collection":"handmade-chocolates"},{"title":"Dark Chocolate","collection":"dark-chocolate"},{"title":"Milk Chocolate","collection":"milk-chocolate"},{"title":"Truffles","collection":"truffles"},{"title":"Creams","collection":"creams"},{"title":"Clusters","collection":"clusters"},{"title":"Caramels","collection":"caramels"},{"title":"Patties","collection":"patties"},{"title":"Pretzels","collection":"pretzels"},{"title":"Bark","collection":"bark"},{"title":"Taffy, Nuts & Toppings","collection":"taffy-nuts-toppings"},{"title":"Novelty Chocolates","collection":"novelty-chocolates"}]},{"title":"Apples & Popcorn","collection":"gourmet-caramel-apples","children":[{"title":"Caramel Apples","collection":"gourmet-caramel-apples"},{"title":"Gourmet Popcorn","collection":"gourmet-popcorn"}]},{"title":"Gifts","collection":"gift-ideas","children":[{"title":"Gift Box Towers","collection":"gift-box-towers"},{"title":"Business Gifts","collection":"business-gifts"},{"title":"Fudge of the Month Club","collection":"fudge-of-the-month-club"},{"title":"All Gift Ideas","collection":"gift-ideas"}]},{"title":"Sugar Free","collection":"sugar-free","children":[{"title":"Sugar Free Fudge","collection":"sf-fudge"},{"title":"Sugar Free Truffles","collection":"sf-truffles"},{"title":"Sugar Free Taffy","collection":"sugar-free-taffy"}]},{"title":"Seasonal","collection":"christmas","children":[{"title":"Christmas","collection":"christmas"},{"title":"Valentine's Day","collection":"valentines-day"},{"title":"Easter","collection":"easter"},{"title":"St. Patrick's Day","collection":"st-patricks-day"},{"title":"Mother's Day","collection":"mothers-day"},{"title":"Father's Day","collection":"fathers-day"}]}],"utilityLinks":["Our Team","About Us","Contact Us","Shipping & Returns"],"collections":{"fudge":{"title":"Fudge","count":62,"description":"Our fudge is still made the way Jim Marshall learned it on Mackinac Island in 1923: cooked in copper kettles and worked by hand on marble tables. Choose from classics like Chocolate Plain, Penuche and Butter Pecan, nut favorites like Chocolate English Walnut, or newer flavors like Chocolate Sea Salt Caramel and Birthday Cake. Looking for something different? Try our Dairy Free Chocolate Fudge, a 4 slice Marshall's Sampler, or a Fudge of the Month membership.","image":"../../../img/0a17688755856922.png","sample":[{"title":"Chocolate Plain Fudge","handle":"chocolate-plain-fudge","price":"$14.50","options":[],"image":"../../../img/0a17688755856922.png"},{"title":"Chocolate Pecan Fudge","handle":"chocolate-pecan-fudge","price":"$14.50","options":[],"image":"../../../img/f670fc2b26be2baa.jpg"},{"title":"Chocolate English Walnut Fudge","handle":"chocolate-english-walnut-fudge","price":"$14.50","options":[],"image":"../../../img/e21d9ac2d24edd38.png"},{"title":"Chocolate Black Walnut Fudge","handle":"chocolate-black-walnut-fudge","price":"$14.50","options":[],"image":"../../../img/974de90e21d76c9a.jpg"},{"title":"Chocolate Cashew Fudge","handle":"chocolate-cashew-fudge","price":"$14.50","options":[],"image":"../../../img/c0d0109ed6379d78.jpg"},{"title":"Chocolate Rum Fudge","handle":"chocolate-rum-fudge","price":"$14.50","options":[],"image":"../../../img/c7deae95018236c7.jpg"},{"title":"Maple English Walnut Fudge","handle":"maple-english-walnut-fudge","price":"$14.50","options":[],"image":"../../../img/8d439844d8a7f12e.jpg"},{"title":"Vanilla Pecan Fudge","handle":"vanilla-pecan-fudge","price":"$14.50","options":[],"image":"../../../img/3e7ad8e66c4cba59.jpg"}]},"original-mackinac-island-fudge":{"title":"Original Mackinac Island Fudge","count":39,"description":"This is the fudge that made Mackinac Island famous, made from the Marshall family recipes that go back to 1923. Every batch is cooked in copper kettles and finished by hand on marble tables in Mackinaw City. Pick your favorites from Chocolate Plain, Maple English Walnut, Rocky Road, Penuche, Chocolate Caramel Pecan (Turtle Fudge), Pistachio Nut and more, including dairy free chocolate flavors.","image":"../../../img/0a17688755856922.png"},"fudge-of-the-month-club":{"title":"Fudge of the Month Club","count":15,"description":"Send Mackinac Island fudge all year long. Each month brings two flavors, from Plain Chocolate and Butter Pecan in January to Chocolate Rum and Penuche in December, with seasonal treats like Fresh Strawberry, Fresh Lemon and Pumpkin along the way. Choose Fudge Out (4 times a year), Fudgies Fantasy (6 times a year) or Fudgies' Fantasy (12 times a year), or order a single month's pairing.","image":"../../../img/e1e938aaa314d679.jpg"},"other-hand-crafted-candies":{"title":"Other Hand Crafted Candies","count":20,"description":"Beyond fudge, our candy kitchen turns out a little of everything. Pick up Sweet Cream Caramel Kisses, Pecan Divinity Puffs, Peanut, Cashew and Coconut Brittle, Salt Water Taffy, or Chocolate Caramel Nut Pretzels. You'll also find Jumbo Roasted Cashews, Deluxe Mixed Nuts, Assorted Fruit Slices, and our Penuche, Double Chocolate and Cream Caramel toppings for ice cream at home.","image":"../../../img/b33ea0e6413f0932.jpg"},"chocolates":{"title":"Chocolates","count":123,"description":"Our chocolates are made by hand in the same Mackinaw City kitchen as our fudge. Browse milk, dark and white chocolate favorites, from Pecan Giants and Cashew Puddles to Northern Pralines, Milk Chocolate Seafoam and Heavenly Hash. You'll also find truffles, creams, caramel patties, clusters, bark, chocolate covered pretzels and sugar free options, plus boxed assortments for sharing.","image":"../../../img/f1dd296d89c08b5f.jpg","sample":[{"title":"Milk Chocolate Raisin Clusters","handle":"milk-chocolate-raisin-clusters","price":"$21.50","options":[{"name":"Chocolate Weight","values":["Half Pound","One Pound","Two Pounds"]}],"image":"../../../img/f1dd296d89c08b5f.jpg"},{"title":"Sweet Cream Caramel Kisses (One pound)","handle":"sweet-cream-caramel-kisses-one-pound","price":"$27.00","options":[],"image":"../../../img/b33ea0e6413f0932.jpg"},{"title":"Dark Chocolate Peanut Clusters","handle":"dark-chocolate-peanut-clusters","price":"$21.50","options":[{"name":"Chocolate Weight","values":["Half Pound","One Pound","Two Pounds"]}],"image":"../../../img/b64acedab46c34d3.jpg"},{"title":"Pecan Divinity Puffs","handle":"pecan-divinity-puffs","price":"$24.00","options":[],"image":"../../../img/5d4ae06dd37dfc1f.jpg"},{"title":"Peanut Brittle one pound","handle":"peanut-brittle-one-pound","price":"$18.00","options":[],"image":"../../../img/89249205e9233324.jpg"},{"title":"Northern Pralines","handle":"northern-pralines","price":"$19.00","options":[],"image":"../../../img/9e131230cf791b8d.jpg"},{"title":"Milk Chocolate Almond Bark","handle":"milk-chocolate-almond-bark","price":"$21.50","options":[{"name":"Chocolate Weight","values":["Half Pound","One Pound","Two Pounds"]}],"image":"../../../img/d0a1d24b646bd458.jpg"},{"title":"Chocolate Covered Pretzels","handle":"chocolate-covered-pretzels","price":"$18.00","options":[],"image":"../../../img/31a9fbb48a32ba1c.jpg"}]},"handmade-chocolates":{"title":"Handmade Chocolates","count":89,"description":"Every piece in this collection is made by hand by the Marshall family team in Mackinaw City. Try Cordial Cherries, Peanut Butter Dreams, Milk Chocolate Porcupines, Sea Salt Caramels, Toffee Almond Crunch, or our Pecan and Cashew Giants. Most favorites come in both milk and dark chocolate, and the Giant Assortment is an easy way to sample a little of everything.","image":"../../../img/b33ea0e6413f0932.jpg"},"bark":{"title":"Bark","count":8,"description":"Our chocolate bark is poured and broken by hand. Choose Milk, Dark or White Chocolate Almond Bark, Milk and Dark Chocolate Mint Bark, Blueberry Pecan Bark, or Milk and White Chocolate Peppermint Bark. For peppermint lovers, All Things Peppermint is a one pound assortment of our handmade dark chocolate, milk chocolate and peppermint bark.","image":"../../../img/d0a1d24b646bd458.jpg"},"dark-chocolate":{"title":"Dark Chocolate","count":20,"description":"For dark chocolate fans, we dip many of our handmade favorites in rich dark chocolate. Choose from Dark Chocolate Sea Salt Caramel, Dark Chocolate Seafoam, Cordial Cherries, Peppermint Patties, Pecan and Cashew Caramel Patties, and Blueberry Pecan Bark. Peanut, pecan, cashew, coconut, raisin and dried cherry clusters round it out, along with sugar free caramel patties.","image":"../../../img/b64acedab46c34d3.jpg"},"milk-chocolate":{"title":"Milk Chocolate","count":34,"description":"Creamy milk chocolate is a family favorite at Marshall's. Find Milk Chocolate Sea Salt Caramel, Toffee Almond Crunch, Peanut Butter Dreams, Milk Chocolate Porcupines, Heavenly Hash, Cordial Cherries, and Milk Chocolate Covered Oreos and Potato Chips. There are clusters and caramel patties in every nut, sugar free versions of many favorites, and a Chocolate Assortment for sharing.","image":"../../../img/d0a1d24b646bd458.jpg"},"caramels":{"title":"Caramels","count":7,"description":"Our caramels are made by hand in our Mackinaw City kitchen. Choose plain Sweet Cream Caramel Kisses by the pound or in a gift tin, or caramels dipped in milk or dark chocolate. For a salty sweet bite, try the Milk Chocolate and Dark Chocolate Sea Salt Caramels. Sugar Free Caramels in milk chocolate are available too.","image":"../../../img/b33ea0e6413f0932.jpg"},"patties":{"title":"Patties","count":12,"description":"Our patties pair soft caramel or cool peppermint with milk or dark chocolate. Choose Pecan Caramel Patties, Cashew Caramel Patties or Peppermint Patties in either chocolate. Watching your sugar? Sugar free pecan caramel, cashew caramel and peppermint patties are made by hand right alongside the originals.","image":"../../../img/a39147dde13c819d.jpg"},"pretzels":{"title":"Pretzels","count":4,"description":"Salty, crunchy pretzels meet our handmade chocolate and caramel. Choose classic Chocolate Covered Pretzels, Chocolate Caramel Pretzels, Chocolate Caramel Nut Pretzels, or festive Candy Cane Pretzels. They make an easy add on to a fudge order or a simple gift on their own.","image":"../../../img/31a9fbb48a32ba1c.jpg"},"taffy-nuts-toppings":{"title":"Taffy/ Nuts/ Toppings","count":13,"description":"Stock up on Salt Water Taffy and Sugar Free Taffy, plus Jumbo Roasted Cashews, Deluxe Mixed Nuts, Cinnamon Roasted Almonds, Pistachios, Fancy Pecans and Shelled California English Walnuts. Bring the fudge shop home with our Penuche Fudge, Double Chocolate Fudge and Cream Caramel toppings, made for spooning over ice cream.","image":"../../../img/ec5eb32956eb3292.jpg"},"truffles":{"title":"Truffles","count":19,"description":"Our truffles are handmade with smooth, rich centers. Flavors include Almond Amaretto, Grand Marnier, Raspberry, Cherry, Blueberry, Banana, Kahlúa, Creme de Mint, Double Chocolate and Hot Chili. Look for seasonal Snowball and Candy Cane Truffles, sugar free truffles, and the Truffle Assortment when you can't pick just one.","image":"../../../img/bce58b444888b40e.jpg"},"creams":{"title":"Creams","count":8,"description":"Our creams are soft, flavored centers covered in milk or dark chocolate. Choose Orange, Raspberry, Butter, Lemon or Bavarian Cream in milk chocolate, or Maple and Strawberry Creams in dark chocolate. The Cream Assortment brings several flavors together, and Sugar Free Raspberry Creams are available too.","image":"../../../img/d7abc909d18dead4.jpg"},"clusters":{"title":"Clusters","count":17,"description":"Simple and satisfying, our clusters are handfuls of nuts or fruit bound in chocolate. Choose peanut, pecan, cashew, coconut, raisin or dried cherry clusters in milk or dark chocolate, or try our Milk Chocolate Porcupines. Sugar free peanut, coconut and cashew clusters are available, and the Chocolate Assortment mixes clusters with other favorites.","image":"../../../img/f1dd296d89c08b5f.jpg"},"novelty-chocolates":{"title":"Novelty Chocolates","count":5,"description":"Chocolate shaped for the occasion. Our novelty chocolates include Chocolate Flip Flops, Chocolate Stilettos, a Chocolate Slipper, Chocolate Roses in a set of 6, and Milk and White Chocolate Roses in a set of 2. They make a playful gift for birthdays, Mother's Day, Valentine's Day or a thank you.","image":"../../../img/0de3924e3fed0151.jpg"},"turkey-trot-special":{"title":"Turkey Trot Special","count":1,"description":"Our Turkey Trot Special brings together three Marshall's favorites for the Thanksgiving season: Plain Chocolate Fudge, Chocolate English Walnut Fudge and Sweet Cream Caramel Kisses. It's an easy hostess gift or a treat for the family table, made in our Mackinaw City kitchen.","image":"../../../img/1e5f9110fde8c9d3.jpg"},"gourmet-caramel-apples":{"title":"Caramel Apples","count":20,"description":"Our caramel apples are dipped in Sweet Cream Caramel and finished by hand. Keep it simple with plain Caramel Apples, or choose toppings like pecan halves, roasted cashews, chopped almonds, Spanish peanuts, coconut, Oreo, M&amp;M or apple pie. Many come drizzled in milk chocolate, and most are sold in sets of 2. The Sweet Cream Caramel Apples Assortment lets you try several.","image":"../../../img/c21f21b1f2e93704.jpg","sample":[{"title":"Sweet Cream Caramel Apples Assortment","handle":"sweet-cream-caramel-apples-assortment","price":"$46.00","options":[],"image":"../../../img/c21f21b1f2e93704.jpg"},{"title":"Caramel Apples (Set of 2)","handle":"caramel-apples-set-of-2","price":"$20.00","options":[],"image":"../../../img/18c2b57866953b11.jpg"},{"title":"Chopped Almonds Caramel Apples (Set of 2)","handle":"chopped-almonds-caramel-apples-set-of-2","price":"$22.00","options":[],"image":"../../../img/79188fe862adeeff.jpg"},{"title":"Roasted Cashews Caramel Apples (Set of 2)","handle":"roasted-cashews-caramel-apples-set-of-2","price":"$22.00","options":[],"image":"../../../img/9c2b2dca5d81b3df.jpg"},{"title":"Pecan Halves Caramel Apples (Set of 2)","handle":"pecan-halves-caramel-apples-set-of-2","price":"$22.00","options":[],"image":"../../../img/433f32f1d4ab5dd8.jpg"},{"title":"M&M Caramel Apples (Set of 2)","handle":"m-m-caramel-apples-set-of-2","price":"$22.00","options":[],"image":"../../../img/9c390e0a96d04f1d.jpg"},{"title":"Caramel Drizzled in Milk Chocolate Caramel Apples (Set of 2)","handle":"caramel-drizzled-in-milk-chocolate-caramel-apples-set-of-2","price":"$22.00","options":[],"image":"../../../img/215489a6d01aee39.jpg"},{"title":"Chopped Almonds and Milk Chocolate Caramel Apples (Set of 2)","handle":"chopped-almonds-and-milk-chocolate-caramel-apples-set-of-2","price":"$24.00","options":[],"image":"../../../img/dd916e8cfb4fe21d.jpg"}]},"gourmet-popcorn":{"title":"Gourmet Popcorn","count":10,"description":"Our caramel corn comes by the pound and in gift tins. Choose classic Caramel Corn, Almond Pecan Caramel Corn, or Chocolate Drizzle Caramel Corn. For parties, offices and holidays, our tins come in 1, 2, 3.5 and 6.5 gallon sizes, with a 1 gallon tub as well.","image":"../../../img/60949164917989be.jpg","sample":[{"title":"Tin 1 Gallon","handle":"tin-1-gallon","price":"$29.00","options":[{"name":"1 Gallon Tin Popcorn Flavor","values":["Chocolate Drizzle","Almond & Pecan Caramel Corn","Cheese Corn","Caramel Corn","Chicago Corn"]},{"name":"One Gallon Tin Design","values":["Golden Swirls","Sparkles & Snow","Bundled Up","Cheery Snowman","Vintage Postcards","Walk in the Woods","Vintage Christmas","Holiday Cheer","Special Delivery"]}],"image":"../../../img/60949164917989be.jpg"},{"title":"Caramel Corn (1/2 lb.)","handle":"caramel-corn-1-2-lb","price":"$9.00","options":[],"image":"../../../img/37861886b2dc8514.jpg"},{"title":"Tub 1 Gallon","handle":"tub-1-gallon","price":"$26.00","options":[{"name":"Popcorn Flavors","values":["Chocolate Drizzle","Almond & Pecan Caramel Corn","Cheese Corn","Caramel Corn","Chicago Corn"]}],"image":"../../../img/c1cae1dabfe81c01.jpg"},{"title":"Tin 2 Gallon","handle":"tin-2-gallon","price":"$40.00","options":[{"name":"Tin 2 Gallon Popcorn Options","values":["Chicago Corn","Chocolate Drizzle","Almond & Pecan Caramel Corn","Cheese Corn","Gourmet Corn Trio - Includes: Caramel Corn, Chocolate Drizzle, and Cheese Corn."]},{"name":"2 Gallon Tin Options","values":["Cheery Snowman","Home for the Holidays","Warm Winter Wishes","Christmas Stocking","Gift Wrap","Holly and Pine","Peppermint Snowman"]}],"image":"../../../img/08967976e336d478.jpg"},{"title":"Tin 3.5 Gallon","handle":"tin-3-5-gallon","price":"$52.00","options":[{"name":"Tin 3.5 Gallon Popcorn Options","values":["Caramel Corn","Chicago Corn","Chocolate Drizzle","Almond & Pecan Caramel Corn","Cheese Corn"]},{"name":"3.5 Gallon Tin Options","values":["Scarf Snowman","Cheery Snowman","Cozy Christmas","Crystal Evening","Holly & Pine","Snow Covered Mill","Special Delivery","Warm Winter Wishes"]}],"image":"../../../img/fb6d70415637bf3e.jpg"},{"title":"Tin 6.5 Gallon","handle":"tin-6-5-gallon","price":"$90.00","options":[{"name":"Tin 6.5 Popcorn Options","values":["Chocolate Drizzle Corn","Almond & Pecan Caramel Corn","Cheese Corn","Gourmet Corn Trio - Includes Caramel Corn, Chocolate Drizzle and Cheese Corn"]},{"name":"6.5 Gallon Tin Choices","values":["Cheery Snowman","Holly & Pine","Special Delivery","Warm Winter Wishes"]}],"image":"../../../img/c11a66e4e6bc5001.jpg"},{"title":"Almond Pecan Caramel Corn (1 lb.)","handle":"almond-pecan-caramel-corn-1-lb","price":"$19.00","options":[],"image":"../../../img/5bf2163878be301a.jpg"},{"title":"Caramel Corn (1 pound)","handle":"caramel-corn-1-pound","price":"$18.00","options":[],"image":"../../../img/75b9ac7fd786a551.jpg"}]},"gift-ideas":{"title":"Gift Ideas","count":44,"description":"Share a taste of Mackinac Island. Our gift ideas include fudge trays like Bud's, Dean's and Adare's, Fudge Gift Tins with 2 or 4 slices, Gift Box Towers, and baskets such as Mitch's Fudge Basket and Memories of Michigan. Not sure what they'll like? A Marshall's Fudge Gift Certificate, a Sampler or a Fill Your Own Box lets them choose.","image":"../../../img/7b2da0356a7c264e.jpg","sample":[{"title":"Gift Box Assortment","handle":"gift-box-assortment","price":"$65.00","options":[{"name":"Gift Box","values":["Christmas Plaid","Hollyday Plaid","Metalic Dots","Silver","Birch and Pine","Joyful Snowman","Santa's Belt","Gingerbread House","Holly Jolly","Plaid Trees","Black Plaid Snowflake"]}],"image":"../../../img/7b2da0356a7c264e.jpg"},{"title":"Bud's Fudge Tray","handle":"buds-fudge-tray","price":"$125.00","options":[],"image":"../../../img/ccef2a2309db63c9.jpg"},{"title":"Dean's Fudge Tray","handle":"deans-fudge-tray","price":"$100.00","options":[],"image":"../../../img/dd8291d79a0c6cde.jpg"},{"title":"Cheers' Fudge Tray","handle":"cheers-fudge-tray","price":"$80.00","options":[],"image":"../../../img/67ffe6ef6166eb02.jpg"},{"title":"Adare's Fudge Tray","handle":"adares-fudge-tray","price":"$130.00","options":[],"image":"../../../img/733a4ecb7448d2ff.jpg"},{"title":"Fudge Gift Tin - 4 Slice","handle":"fudge-gift-tin-4-slice","price":"$56.00","options":[{"name":"Gift Tin Options","values":["Birthday Party","Crystal Evening","Gold","Golden Pond","Polar Skate","Sunbathers","Thank You","Poinsettias with Pine","Snow Pals","Winter's Charm","Snow Family"]}],"image":"../../../img/4af8457d708804c6.jpg"},{"title":"Fudge Gift Tin - 2 Slice","handle":"fudge-gift-tin-2-slice","price":"$32.00","options":[{"name":"Gift Tin Options","values":["Birthday Party","Gold","Thank You","Crystal Evening","Golden Pond","Polar Skate","Winter's Charm","Snow Pals","Poinsettias with Pine","Snow Family"]}],"image":"../../../img/30dab5acb37e4379.jpg"},{"title":"Gourmet Assortment Tray","handle":"gourmet-assortment-tray","price":"$75.00","options":[],"image":"../../../img/7171cec20176133c.jpg"}]},"gift-box-towers":{"title":"Gift Box Towers","count":10,"description":"Our Gift Box Towers stack Marshall's fudge and candy in a tower of gift boxes, ready to give. Choose the classic Gift Box Tower or a holiday design like Cardinal, Reindeer, Joy, Snowflake, Holly Berry or Holiday Chevron. They are a favorite for families, hosts and business gifts alike.","image":"../../../img/e9a2fdf6140c1712.jpg","sample":[{"title":"Gift Box Tower","handle":"gift-box-tower","price":"$80.00","options":[{"name":"Tower Print","values":["Holiday Chevron"]}],"image":"../../../img/e9a2fdf6140c1712.jpg"},{"title":"Cardinal Gift Box Tower","handle":"cardinal-gift-box-tower","price":"$80.00","options":[],"image":"../../../img/dd39171b4bff90fb.jpg"},{"title":"Reindeer Gift Box Tower","handle":"reindeer-gift-box-tower","price":"$79.00","options":[],"image":"../../../img/c0fde70504b7136c.jpg"},{"title":"Joy Gift Box Tower","handle":"joy-gift-box-tower","price":"$79.00","options":[],"image":"../../../img/29831b0b74f35e73.jpg"},{"title":"Snowflake Gift Box Tower","handle":"snowflake-gift-box-tower","price":"$80.00","options":[],"image":"../../../img/560fec45bfa14ad6.jpg"},{"title":"Holiday Chevron Gift Box Tower","handle":"holiday-chevron-gift-box-tower","price":"$80.00","options":[],"image":"../../../img/3cdb699391870108.jpg"},{"title":"Holly Berry Gift Box Tower","handle":"holly-berry-gift-box-tower","price":"$79.00","options":[],"image":"../../../img/277b715a5ab592b8.jpg"},{"title":"Holly-Day Gift Box Tower","handle":"holly-day-gift-box-tower","price":"$79.00","options":[],"image":"../../../img/a261cf633096ab17.jpg"}]},"business-gifts":{"title":"Business Gifts","count":15,"description":"There’s nothing better than world famous Mackinac Island fudge from Marshall’s Fudge &amp; Candy Company for client business gifts. Marshall’s Fudge is one of the original Mackinac Island Fudge businesses using recipes from 1887 and is still handmade today with founder Jim Marshall’s original recipe. The 3rd generation Marshall family makes each batch from scratch using the freshest ingredients mixed in copper pots and hand crafted on our Italian marble tables. For your corporate gift giving convenience... Mix &amp; Match Assortments of Fudge, Candy and Chocolates Easy to Share Group Gifts Affordable Options for all Budgets Unique Selection of Tins, Towers, Bags &amp; Baskets Personalized Cards Easy Ordering Online or via Phone Ship to Multiple Locations Buy Now, Ship Later Want to keep your business front of mind with your clients and prospects all year long? &nbsp;Remind them of your services every month by giving the gift of Marshall’s Fudge or Caramel Apple of the Month Club. Sweet treats delivered fresh to their door every month will guarantee your business stays top of mind! Click here to see the tasty options. Interested in more business gift promotions? Sign up to receive monthly emails of Marshall’s &nbsp;most delicious offers!","image":"../../../img/7b2da0356a7c264e.jpg","sample":[{"title":"Gift Box Assortment","handle":"gift-box-assortment","price":"$65.00","options":[{"name":"Gift Box","values":["Christmas Plaid","Hollyday Plaid","Metalic Dots","Silver","Birch and Pine","Joyful Snowman","Santa's Belt","Gingerbread House","Holly Jolly","Plaid Trees","Black Plaid Snowflake"]}],"image":"../../../img/7b2da0356a7c264e.jpg"},{"title":"Bud's Fudge Tray","handle":"buds-fudge-tray","price":"$125.00","options":[],"image":"../../../img/ccef2a2309db63c9.jpg"},{"title":"Dean's Fudge Tray","handle":"deans-fudge-tray","price":"$100.00","options":[],"image":"../../../img/dd8291d79a0c6cde.jpg"},{"title":"Gourmet Assortment Tray","handle":"gourmet-assortment-tray","price":"$75.00","options":[],"image":"../../../img/7171cec20176133c.jpg"},{"title":"Gift Box Tower","handle":"gift-box-tower","price":"$80.00","options":[{"name":"Tower Print","values":["Holiday Chevron"]}],"image":"../../../img/e9a2fdf6140c1712.jpg"},{"title":"Fan Favorite Tray","handle":"fan-favorite-tray","price":"$85.00","options":[],"image":"../../../img/644355cf75b44e26.jpg"},{"title":"Mary Kay's Gift Basket","handle":"mary-kays-gift-basket","price":"$270.00","options":[],"image":"../../../img/35f9b0c5db8a7a5b.jpg"},{"title":"Jeannie's Gift Basket","handle":"jeannies-gift-basket","price":"$200.00","options":[],"image":"../../../img/ed64f1299c5e8189.jpg"}]},"sugar-free":{"title":"Sugar Free","count":19,"description":"Sugar free doesn't have to mean going without. We make sugar free versions of many favorites by hand, including Dark Chocolate, Espresso, Mint and Peanut Butter Truffles, Fudge Meltaways, Caramels, Cordial Cherries and Peanut Butter Cups. You'll also find sugar free caramel and peppermint patties, clusters, Raspberry Creams, Taffy and a Sugar Free Candy Assortment.","image":"../../../img/e30d17a93ed766d0.jpg"},"sf-fudge":{"title":"SF Fudge","count":1,"description":"Our Sugar Free Fudge Meltaways are smooth, fudge style centers covered in milk chocolate and made without sugar. They're a good pick when you want the taste of Marshall's fudge without the sugar. Find more sugar free truffles, caramels and patties in our Sugar Free collection.","image":"../../../img/5367a638bb2b67d0.jpg"},"sf-truffles":{"title":"SF Truffles","count":5,"description":"Our sugar free truffles are made by hand with the same care as our original truffles. Choose Sugar Free Dark Chocolate, Espresso, Mint or Peanut Butter Truffles. For a mix of sugar free favorites, try the Sugar Free Candy Assortment.","image":"../../../img/e30d17a93ed766d0.jpg"},"sugar-free-taffy":{"title":"Taffy","count":1,"description":"Our Sugar Free Taffy gives you the soft, chewy fun of classic salt water taffy without the sugar. It's an easy, chewy treat to tuck into a gift box or share at home. Pair it with sugar free truffles or caramels from the rest of our sugar free line.","image":"../../../img/438aa3e9dad6ccf9.png"},"christmas":{"title":"Christmas","count":19,"description":"Christmas has always been a busy season in the Marshall family kitchen. Fill stockings and tables with Mackinac Island fudge, Milk and White Chocolate Peppermint Bark, Candy Cane Pretzels and Snowball Truffles. For giving, look to our holiday Gift Box Towers, Santa's Belly Full, the Marshall's Stocking Stuffer and our holiday fudge gift cards.","image":"../../../img/c35e27274d8a39ef.png","sample":[{"title":"Santa's Belly Full","handle":"santas-belly-full","price":"$38.00","options":[{"name":"Santa's Bellyfull","values":["Christmas Elegance","Christmas Plaid","Dashing Reindeer","Golden Midnight","Hollyday","Metallic Dots","Rustic Berries","Santa's Belt","Silver"]}],"image":"../../../img/c35e27274d8a39ef.png"},{"title":"Candy Cane Pretzels","handle":"candy-cane-pretzels","price":"$20.00","options":[],"image":"../../../img/12c0f322264ef10c.jpg"},{"title":"Milk And White Chocolate Peppermint Bark","handle":"milk-and-white-chocolate-peppermint-bark","price":"$21.50","options":[{"name":"Chocolate Weight","values":["Half Pound","One Pound","Two Pounds"]}],"image":"../../../img/e52dccce10d00e95.jpg"},{"title":"Marshall's Stocking Stuffer","handle":"marshalls-stocking-stuffer","price":"$9.00","options":[],"image":"../../../img/768e9a86db4afde2.jpg"},{"title":"Jingle All the Way","handle":"jingle-all-the-way","price":"$40.00","options":[],"image":"../../../img/74e289ff32c0be8e.jpg"},{"title":"Nesting Snowman Crates","handle":"nesting-snowman-crates","price":"$57.00","options":[],"image":"../../../img/8cb8b56d03df9b10.jpg"},{"title":"Snowball Truffles","handle":"snowball-truffles","price":"$16.00","options":[{"name":"Count","values":["6 Count","12 Count","24 Count"]}],"image":"../../../img/9b2f9c1c4d39487e.jpg"},{"title":"Candy Cane Truffles","handle":"candy-cane-truffles","price":"$16.00","options":[{"name":"Count","values":["6 Count","12 Count","24 Count"]}],"image":"../../../img/be0eccfffa935a33.jpg"}]},"valentines-day":{"title":"Valentine's Day","count":10,"description":"Say it with chocolate. Our Valentine's Day collection includes Chocolate Roses, Chocolate Hearts and Heart Lollipops, Chocolate Bars, and a Chocolate Stiletto filled with truffles. Add a slice or two of Mackinac Island fudge from our Valentine's Day specials for a sweet that's been a Marshall family tradition since 1923.","image":"../../../img/0ae694a714b4910b.png"},"easter":{"title":"Easter","count":11,"description":"Fill the Easter basket with handmade chocolate from Marshall's. Choose from Cottontail Chocolate Easter Bunnies, the Floppy Ear, Big Ear and Sitting Easter Bunnies, a Large Easter Bunny, a Chocolate Duckling, Easter suckers and a Chocolate Cross. Milk and White Chocolate Roses make a pretty addition to the Easter table.","image":"../../../img/1cd387d71b9881df.jpg"},"st-patricks-day":{"title":"St. Patrick's Day","count":4,"description":"Go green with Marshall's. Our St. Patrick's Day picks include Pistachio Nut Fudge and Mint Chocolate Chip Fudge, both made in copper kettles and finished on marble tables. The St. Patrick's Special pairs a half pound slice of fudge with Dark Chocolate Mint Bark and a Creme de Mint Truffle.","image":"../../../img/da37249112909fb1.jpg"},"mothers-day":{"title":"Mother's Day","count":8,"description":"Treat Mom to something handmade. Our Mother's Day collection includes Chocolate Roses, Milk and White Chocolate Roses, Chocolate Flip Flops and a Mother Chocolate Bar. Our Mother's Day Special pairs these with Mackinac Island fudge from the Marshall family kitchen.","image":"../../../img/0de3924e3fed0151.jpg"},"fathers-day":{"title":"Father's Day","count":4,"description":"For the dad who loves fudge. Our Father's Day specials bring together Mackinac Island fudge and handmade caramels, like two slices of fudge paired with a half pound of caramels. Every slice is cooked in copper kettles and finished on marble tables, the way the Marshall family has done it since 1923.","image":"../../../img/77f484cc2ac5cf44.jpg"}}};
+document.documentElement.classList.add('js');
+const $ = s => document.querySelector(s);
+const esc = s => String(s).replace(/&amp;/g,'&').replace(/&nbsp;/g,' ').replace(/[&<>"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+const L = p => /^https?:|^\.\.\/\.\.\/\.\.\/img\//.test(p) ? p : '../' + p;   // data paths are relative to prototypes/
+const B = DATA.brand, C = DATA.collections;
+const telNum = '+18003438343';
+const chev = '<svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M2 4l4 4 4-4"/></svg>';
+
+/* utility + header */
+$('#u-phone').textContent = B.phone; $('#u-phone').href = 'tel:' + telNum;
+$('#u-tag').textContent = B.tagline;
+$('#u-links').innerHTML = DATA.utilityLinks.map(l => `<li><a href="#">${esc(l)}</a></li>`).join('') + '<li><a href="#">My Account</a></li>';
+$('#logo').src = L(B.logos.horizontal); $('#d-logo').src = L(B.logos.horizontal);
+['#badge','#f-logo'].forEach(s => { const e = $(s); if (e) e.src = L(B.logos.badge); });
+
+/* mega menu */
+const nav = $('#nav');
+nav.innerHTML = DATA.megaMenu.map((m, i) => {
+  const col = C[m.collection] || {};
+  return `<li data-i="${i}">
+    <button class="nav-top" aria-expanded="false" aria-controls="mega-${i}">${esc(m.title)}${chev}</button>
+    <div class="mega" id="mega-${i}">
+      <div class="wrap mega-inner">
+        <div><h2>${esc(m.title)}</h2>
+          <ul class="mega-links">${m.children.map(c => `<li><a href="#">${esc(c.title)}</a></li>`).join('')}<li><a href="#"><strong>Shop all ${esc(m.title)}</strong></a></li></ul>
+        </div>
+        <a class="mega-feature" href="#">
+          <img src="${L(col.image||'')}" alt="" loading="lazy" width="160" height="160">
+          <span><strong>${esc(col.title||m.title)}</strong><p>${esc(col.description||'')}</p><span class="textlink">Shop ${esc(col.title||m.title)}</span></span>
+        </a>
+      </div>
+    </div></li>`;
+}).join('');
+let closeT;
+const items = [...nav.children];
+function openItem(li){ items.forEach(o => { const on = o === li; o.classList.toggle('open', on); o.querySelector('.nav-top').setAttribute('aria-expanded', on); }); }
+function closeAll(){ openItem(null); }
+items.forEach(li => {
+  li.addEventListener('mouseenter', () => { clearTimeout(closeT); openItem(li); });
+  li.addEventListener('mouseleave', () => { closeT = setTimeout(closeAll, 160); });
+  li.querySelector('.nav-top').addEventListener('click', () => li.classList.contains('open') ? closeAll() : openItem(li));
+  li.addEventListener('focusout', e => { if (!li.contains(e.relatedTarget)) li.classList.remove('open'), li.querySelector('.nav-top').setAttribute('aria-expanded', false); });
+});
+document.addEventListener('keydown', e => { if (e.key === 'Escape') { const o = nav.querySelector('li.open'); closeAll(); o && o.querySelector('.nav-top').focus(); closeDrawer(); } });
+
+/* drawer */
+$('#d-nav').innerHTML = DATA.megaMenu.map(m => `<details><summary>${esc(m.title)}${chev}</summary><ul>${m.children.map(c => `<li><a href="#">${esc(c.title)}</a></li>`).join('')}<li><a class="all" href="#">Shop all ${esc(m.title)}</a></li></ul></details>`).join('');
+$('#d-util').innerHTML = `<a href="tel:${telNum}">${esc(B.phone)}</a>` + ['My Account', ...DATA.utilityLinks].map(l => `<a href="#">${esc(l)}</a>`).join('');
+const drawer = $('#drawer'), openBtn = $('#menu-open');
+function openDrawer(){ document.body.classList.add('drawer-open'); drawer.setAttribute('aria-hidden','false'); openBtn.setAttribute('aria-expanded','true'); $('#menu-close').focus(); }
+function closeDrawer(){ if(!document.body.classList.contains('drawer-open')) return; document.body.classList.remove('drawer-open'); drawer.setAttribute('aria-hidden','true'); openBtn.setAttribute('aria-expanded','false'); openBtn.focus(); }
+openBtn.addEventListener('click', openDrawer); $('#menu-close').addEventListener('click', closeDrawer); $('#scrim').addEventListener('click', closeDrawer);
+
+
+/* cards */
+function card(p, cls=''){
+  const opts = p.options && p.options.length;
+  const n = opts ? p.options[0].values.length : 0;
+  return `<article class="card ${cls}">
+    <a class="card-img" href="product.html" tabindex="-1" aria-hidden="true"><img src="${p.image}" alt="" loading="lazy" width="600" height="600"></a>
+    <h3><a href="product.html">${esc(p.title)}</a></h3>
+    ${cls==='lead' ? `<p class="lead-note">Four slices of Marshall's fudge in one box, the easiest way to try the classics.</p>` : ''}
+    <div class="card-meta"><span class="price">${p.price}</span>${opts ? `<span class="card-opts">${n} ${esc(p.options[0].name.toLowerCase().includes('weight')?'sizes':'options')}</span>` : ''}</div>
+    ${opts ? `<a class="card-act" href="product.html">Choose options</a>` : `<button class="card-act" type="button" data-add="${esc(p.title)}">Add to cart</button>`}
+  </article>`;
+}
+
+const [street, ...rest] = B.address.split(', ');
+const toast = $('#toast');
+
+/* footer */
+$('#f-addr').innerHTML = `${esc(street)}<br>${esc(rest.join(', '))}<br><a href="tel:${telNum}">${esc(B.phone)}</a>`;
+$('#f-cats').innerHTML = DATA.megaMenu.map(m => `<li><a href="#">${esc(m.title)}</a></li>`).join('') + '<li><a href="#club">Fudge of the Month Club</a></li>';
+$('#f-util').innerHTML = ['My Account', ...DATA.utilityLinks].map(l => `<li><a href="#">${esc(l)}</a></li>`).join('');
+$('#f-fb').href = B.facebook;
+$('#f-copy').textContent = '© 2026 ' + B.name;
+$('#f-tag').textContent = B.tagline;
+
+
+
+/* ===== product ===== */
+const P = C['christmas'].sample.find(p => p.handle === 'santas-belly-full');
+const opt = P.options[0];
+document.title = P.title + ' | ' + B.name;
+$('#crumb-p').textContent = P.title;
+$('#p-title').textContent = P.title;
+$('#p-price').textContent = P.price;
+$('#p-desc').textContent = `A Christmas gift from the Marshall's candy kitchen, in your choice of ${opt.values.length} holiday designs. Pick a ship week and add a gift message below.`;
+$('#since').textContent = B.tagline;
+$('#acc-made').textContent = C['fudge'].description.split('. ')[0] + '. ' + DATA.aboutShort;
+document.querySelectorAll('.tel').forEach(a => { a.textContent = B.phone; a.href = 'tel:' + telNum; });
+
+/* gallery (one product photo exists; second thumb is a detail crop of it) */
+const imgs = [{src:P.image, alt:`${P.title}, Christmas gift`}, {src:P.image, alt:`${P.title}, close-up`, zoom:true}];
+const stage = $('#stage'), mainImg = $('#main-img');
+function show(i){ mainImg.src = imgs[i].src; mainImg.alt = imgs[i].alt; stage.classList.toggle('zoom', !!imgs[i].zoom); [...$('#thumbs').querySelectorAll('button')].forEach((b,j) => b.setAttribute('aria-current', i===j)); }
+$('#thumbs').innerHTML = imgs.map((m,i) => `<li><button type="button" aria-label="Show image ${i+1} of ${imgs.length}"><img src="${m.src}" alt=""></button></li>`).join('');
+[...$('#thumbs').querySelectorAll('button')].forEach((b,i) => b.addEventListener('click', () => show(i)));
+show(0);
+
+/* options */
+$('#swatches').innerHTML = opt.values.map((v,i) => `<label><input type="radio" name="design" value="${esc(v)}" ${i===0?'checked':''}><span>${esc(v)}</span></label>`).join('');
+const cur = () => document.querySelector('input[name=design]:checked').value;
+const syncOpt = () => $('#opt-current').textContent = cur();
+$('#swatches').addEventListener('change', syncOpt); syncOpt();
+
+/* quantity */
+const qty = $('#qty');
+const clampQ = () => { qty.value = Math.min(99, Math.max(1, parseInt(qty.value,10) || 1)); updateAtc(); };
+$('#qminus').addEventListener('click', () => { qty.value = +qty.value - 1; clampQ(); });
+$('#qplus').addEventListener('click', () => { qty.value = +qty.value + 1; clampQ(); });
+qty.addEventListener('change', clampQ);
+const money = n => '$' + n.toFixed(2);
+const unit = parseFloat(P.price.replace(/[^0-9.]/g,''));
+function updateAtc(){ $('#atc').textContent = `Add to cart, ${money(unit * qty.value)}`; }
+updateAtc();
+
+/* ship week: ASAP then the next 8 weeks (Mondays) */
+(function(){
+  const sel = $('#shipweek'); const fmt = new Intl.DateTimeFormat('en-US', {month:'short', day:'numeric'});
+  const d = new Date(); d.setHours(0,0,0,0); d.setDate(d.getDate() + ((8 - d.getDay()) % 7 || 7));
+  let html = '<option value="asap">As soon as possible</option>';
+  for (let i = 0; i < 8; i++){ const s = new Date(d); s.setDate(d.getDate() + i*7); html += `<option value="${s.toISOString().slice(0,10)}">Week of ${fmt.format(s)}</option>`; }
+  sel.innerHTML = html;
+})();
+
+/* gift */
+const isGift = $('#isgift'), gf = $('#gift-fields'), msg = $('#giftmsg');
+isGift.addEventListener('change', () => { gf.hidden = !isGift.checked; isGift.setAttribute('aria-expanded', isGift.checked); $('#giftbox').classList.toggle('on', isGift.checked); if (isGift.checked) msg.focus(); });
+msg.addEventListener('input', () => $('#gift-count').textContent = `${msg.value.length} / 250`);
+
+$('#trust').innerHTML = DATA.valueProps.map(v => `<li><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 10.5l4 4 8-9"/></svg>${esc(v)}</li>`).join('');
+
+/* cart drawer */
+const lines = [];
+const cartEl = $('#cart');
+function renderCart(){
+  $('#cart-body').innerHTML = lines.length ? lines.map(l => `<div class="line"><img src="${l.image}" alt=""><div><h3>${esc(l.title)}</h3><dl>
+    ${l.design ? `<dt>Design</dt><dd>${esc(l.design)}</dd>` : ''}<dt>Qty</dt><dd>${l.qty}</dd><dt>Ships</dt><dd>${esc(l.ship)}</dd>
+    ${l.gift ? `<dt>Gift</dt><dd>${l.msg ? '“' + esc(l.msg) + '”' : 'Yes, no message'}</dd>` : ''}</dl>
+    <p class="price" style="margin-top:8px">${money(l.price * l.qty)}</p></div></div>`).join('') : '<p>Your cart is empty. Browse <a href="index.html#christmas">Christmas treats</a>.</p>';
+  const n = lines.reduce((a,l) => a + l.qty, 0);
+  $('#cart-sub').textContent = money(lines.reduce((a,l) => a + l.price*l.qty, 0));
+  $('#cart-count').textContent = n; $('#cart-link').setAttribute('aria-label', `Cart, ${n} item${n===1?'':'s'}`);
+}
+function openCart(){ document.body.classList.add('cart-open'); cartEl.setAttribute('aria-hidden','false'); $('#cart-close').focus(); }
+function closeCart(){ document.body.classList.remove('cart-open'); cartEl.setAttribute('aria-hidden','true'); }
+$('#cart-close').addEventListener('click', closeCart); $('#keep').addEventListener('click', closeCart); $('#cart-scrim').addEventListener('click', closeCart);
+document.addEventListener('keydown', e => { if (e.key === 'Escape') closeCart(); });
+$('#checkout').addEventListener('click', () => { toast.textContent = 'Prototype: checkout opens here.'; toast.classList.add('show'); setTimeout(() => toast.classList.remove('show'), 2400); });
+$('#cart-link').addEventListener('click', e => { e.preventDefault(); renderCart(); openCart(); });
+$('#buy-form').addEventListener('submit', e => {
+  e.preventDefault();
+  const sel = $('#shipweek');
+  lines.push({title:P.title, image:P.image, design:cur(), qty:+qty.value, price:unit, ship:sel.options[sel.selectedIndex].text, gift:isGift.checked, msg:msg.value.trim()});
+  renderCart(); openCart();
+});
+document.addEventListener('click', e => { const b = e.target.closest('[data-add]'); if (!b) return; const p = C['christmas'].sample.find(x => x.title === b.dataset.add); lines.push({title:p.title, image:p.image, qty:1, price:parseFloat(p.price.slice(1)), ship:'As soon as possible'}); renderCart(); openCart(); });
+
+/* more */
+$('#xmas-all').textContent = `Shop all ${C['christmas'].count} Christmas treats`;
+$('#more-grid').innerHTML = C['christmas'].sample.filter(p => p !== P).slice(0,4).map(p => card(p)).join('');
+renderCart();
+</script>
+</body>
+</html>
